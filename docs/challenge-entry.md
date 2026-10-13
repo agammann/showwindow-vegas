@@ -20,7 +20,7 @@ The possible paying customer is a collector who wants a maintained weekend visit
 
 ## Demo
 
-[Planned public demo](https://agammann.github.io/showwindow-vegas/) — deployment and live verification are pending in this draft.
+[Try ShowWindow](https://agammann.github.io/showwindow-vegas/). The public demo runs without an account or a model download.
 
 ![ShowWindow Las Vegas visit planner on desktop](https://raw.githubusercontent.com/agammann/showwindow-vegas/main/docs/images/desktop.jpg)
 
@@ -36,7 +36,7 @@ For a confirmed visit, the HTML download keeps the party, session, cost, address
 
 [agammann/showwindow-vegas on GitHub](https://github.com/agammann/showwindow-vegas)
 
-The repository includes the React/TypeScript planner, deterministic calculation and export code, reviewed event data, a local source compiler, tests, source notes and the actual model execution receipt. Final code publication and remote checks are pending verification in this draft.
+The repository includes the React/TypeScript planner, deterministic calculation and export code, reviewed event data, a local source compiler, tests, source notes and the actual model execution receipt. The source is published under MIT. [CI](https://github.com/agammann/showwindow-vegas/actions/runs/38340115857) and [GitHub Pages deployment](https://github.com/agammann/showwindow-vegas/actions/runs/38340115811) passed.
 
 ## How I Built It
 
@@ -52,7 +52,7 @@ The [execution receipt](https://github.com/agammann/showwindow-vegas/blob/main/a
 
 The planner then uses ordinary code for time intersections, inclusive age cutoffs and admission arithmetic. Unknown child prices and fees remain unknown. Conflicting closing times keep conservative and possible visit durations separate. A TBA destination cannot turn into an address. The public app runs on the curated snapshot and does not contact the local model from a visitor’s browser.
 
-The assembled app passed 50 local tests and the production build. I checked desktop and phone layouts, downloaded real HTML and calendar files, tested VIP timing and the age-10/11 price boundary, and verified that budget errors, TBA destinations and invalid hours block the relevant actions. These are local results; remote CI and the public demo still await verification in this draft.
+The assembled app passed 50 local tests and the production build. I checked desktop and phone layouts, downloaded real HTML and calendar files, tested VIP timing and the age-10/11 price boundary, and verified that budget errors, TBA destinations and invalid hours block the relevant actions. The [remote CI run](https://github.com/agammann/showwindow-vegas/actions/runs/38340115857) also passed. I checked the public site and downloaded both exports there as well.
 
 I also kept two similar-looking trade sessions distinct. Front Row describes free entry for show attendees, so the planner retains the show-admission requirement. Genesis explicitly says its Saturday trade night is free to the public. Treating both as a generic free event would produce the wrong budget advice.
 
@@ -68,4 +68,4 @@ I have not demonstrated a cost or accuracy advantage over a closed model, and th
 
 **Week 2: Side Hustle, overall challenge.** The project targets a specific hobby-community planning task and tests a possible paid research product. Willingness to pay is still unverified.
 
-**Best Use of GitHub Copilot — GitHub Actions automation route:** CI and GitHub Pages workflows are configured in the repository. The category permits GitHub Actions automation; remote execution and deployment evidence are pending in this draft. This does not claim Copilot was used to write the project.
+**Best Use of GitHub Copilot — GitHub Actions automation route:** CI and GitHub Pages workflows are configured in the repository. The category explicitly permits GitHub Actions automation. The [CI workflow](https://github.com/agammann/showwindow-vegas/actions/runs/38340115857) checks the project and the [Pages workflow](https://github.com/agammann/showwindow-vegas/actions/runs/38340115811) builds and deploys the public app.

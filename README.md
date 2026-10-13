@@ -2,7 +2,7 @@
 
 A Las Vegas card-show visit planner by [agammann](https://github.com/agammann). Enter the hours you have, the people coming with you, your collecting interests and an admission budget. ShowWindow compares the published visitor sessions and produces a pocket plan when the destination, hours and party admission can be established.
 
-[Source repository](https://github.com/agammann/showwindow-vegas) · [Planned public demo](https://agammann.github.io/showwindow-vegas/) — deployment verification pending.
+[Source repository](https://github.com/agammann/showwindow-vegas) · [Live demo](https://agammann.github.io/showwindow-vegas/)
 
 ## What it does
 

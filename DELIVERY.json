@@ -1,15 +1,16 @@
 {
   "project": "ShowWindow",
   "owner": "agammann",
-  "status": "local_verified_publication_pending",
+  "status": "ready_for_dev_submission",
   "clientDate": "2026-10-12",
   "repository": {
     "url": "https://github.com/agammann/showwindow-vegas",
-    "status": "public_repository_created_final_publication_pending"
+    "status": "published",
+    "implementationCommit": "dc84fc7417ad886ba511a2e0e9182db8c1f773b6"
   },
   "demo": {
     "url": "https://agammann.github.io/showwindow-vegas/",
-    "status": "deployment_and_live_verification_pending"
+    "status": "published_and_browser_verified"
   },
   "snapshot": {
     "checkedAt": "2026-10-12",
@@ -28,7 +29,7 @@
     "runtime": "Ollama local loopback",
     "role": "source_fact_proposals_for_curator_review",
     "receipt": "artifacts/model-evidence.json",
-    "finalReviewStatus": "individually_reviewed_subset_incorporated",
+    "finalReviewStatus": "reviewed_subset_incorporated",
     "allEventsModelExtracted": false,
     "sourceIdsWithReviewedFields": [
       "front-row-tickets",
@@ -47,15 +48,16 @@
     "compilerBoundaryChecks": {
       "passed": 12,
       "total": 12
-    }
+    },
+    "reviewDocument": "docs/event-sources.md"
   },
   "verification": {
     "productionDatasetSmokeChecks": "passed",
-    "finalUnitAndExportSuite": "passed_50_tests",
+    "finalUnitAndExportSuite": "passed_50_of_50",
     "finalProductionBuild": "passed",
-    "finalBrowserChecks": "passed_desktop_1440_and_phone_390_with_real_html_ics_downloads",
-    "remoteCi": "pending",
-    "publicDemo": "pending"
+    "finalBrowserChecks": "passed_desktop_and_phone",
+    "remoteCi": "passed",
+    "publicDemo": "passed_including_real_exports"
   },
   "commands": {
     "install": "pnpm install --frozen-lockfile",
@@ -81,13 +83,31 @@
     "pricingHypothesis": "A possible $5 weekend research pack; untested. Current app is free and has no checkout."
   },
   "remaining": [
-    "Repeat final assembled-code checks if subsequent changes require it",
-    "Verify final published repository, CI and live Pages demo",
-    "Update draft with verified public delivery evidence",
-    "Review eligibility and rendered draft before submission"
+    "Confirm eligibility and action-time acceptance of contest rules",
+    "Publish and verify the DEV submission"
   ],
   "screenshots": [
     "docs/images/desktop.jpg",
     "docs/images/mobile.jpg"
-  ]
+  ],
+  "remoteRuns": {
+    "implementationCommit": "dc84fc7417ad886ba511a2e0e9182db8c1f773b6",
+    "ci": {
+      "id": 38340115857,
+      "url": "https://github.com/agammann/showwindow-vegas/actions/runs/38340115857",
+      "conclusion": "success"
+    },
+    "pages": {
+      "id": 38340115811,
+      "attempt": 2,
+      "url": "https://github.com/agammann/showwindow-vegas/actions/runs/38340115811",
+      "conclusion": "success"
+    }
+  },
+  "privatePreview": {
+    "url": "https://showwindow-vegas.alx21.chatgpt.site",
+    "audience": "owner_only",
+    "status": "published",
+    "projectId": "appgprj_6acd9b1ae5fc819192f2f8b9e92630e9"
+  }
 }
