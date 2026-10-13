@@ -1,0 +1,93 @@
+{
+  "project": "ShowWindow",
+  "owner": "agammann",
+  "status": "local_verified_publication_pending",
+  "clientDate": "2026-10-12",
+  "repository": {
+    "url": "https://github.com/agammann/showwindow-vegas",
+    "status": "public_repository_created_final_publication_pending"
+  },
+  "demo": {
+    "url": "https://agammann.github.io/showwindow-vegas/",
+    "status": "deployment_and_live_verification_pending"
+  },
+  "snapshot": {
+    "checkedAt": "2026-10-12",
+    "visitDateStart": "2026-10-13",
+    "visitDateEnd": "2026-12-31",
+    "timezone": "America/Los_Angeles",
+    "listings": 11,
+    "sessions": 33,
+    "listingsWithPhysicalVenue": 10,
+    "distinctPhysicalVenues": 6,
+    "venueTbaListings": 1,
+    "liveFeed": false
+  },
+  "model": {
+    "name": "qwen3.5:4b-q4_K_M",
+    "runtime": "Ollama local loopback",
+    "role": "source_fact_proposals_for_curator_review",
+    "receipt": "artifacts/model-evidence.json",
+    "finalReviewStatus": "individually_reviewed_subset_incorporated",
+    "allEventsModelExtracted": false,
+    "sourceIdsWithReviewedFields": [
+      "front-row-tickets",
+      "next-level-event",
+      "next-level-tickets"
+    ],
+    "completeConfiguredCases": {
+      "passed": 1,
+      "total": 4
+    },
+    "evidenceValidatedProposals": {
+      "passed": 3,
+      "total": 4
+    },
+    "expectedSundayConflict": "detected",
+    "compilerBoundaryChecks": {
+      "passed": 12,
+      "total": 12
+    }
+  },
+  "verification": {
+    "productionDatasetSmokeChecks": "passed",
+    "finalUnitAndExportSuite": "passed_50_tests",
+    "finalProductionBuild": "passed",
+    "finalBrowserChecks": "passed_desktop_1440_and_phone_390_with_real_html_ics_downloads",
+    "remoteCi": "pending",
+    "publicDemo": "pending"
+  },
+  "commands": {
+    "install": "pnpm install --frozen-lockfile",
+    "development": "pnpm dev",
+    "tests": "pnpm test",
+    "productionBuild": "pnpm build",
+    "sourceCompiler": "node scripts/compile-sources.mjs --input artifacts/private-inputs/sources.json --output artifacts/private-inputs/proposals.json"
+  },
+  "draft": {
+    "path": "docs/challenge-entry.md",
+    "challengeUrl": "https://dev.to/challenges/hacktoberfest-week2-2026-10-12",
+    "published": false,
+    "submitted": false,
+    "tags": [
+      "devchallenge",
+      "hf26challenge"
+    ]
+  },
+  "businessValidation": {
+    "collectorTrial": "not_established",
+    "willingnessToPay": "not_established",
+    "revenue": "not_established",
+    "pricingHypothesis": "A possible $5 weekend research pack; untested. Current app is free and has no checkout."
+  },
+  "remaining": [
+    "Repeat final assembled-code checks if subsequent changes require it",
+    "Verify final published repository, CI and live Pages demo",
+    "Update draft with verified public delivery evidence",
+    "Review eligibility and rendered draft before submission"
+  ],
+  "screenshots": [
+    "docs/images/desktop.jpg",
+    "docs/images/mobile.jpg"
+  ]
+}

@@ -1,0 +1,1653 @@
+[
+  {
+    "id": "sin-city-october",
+    "name": "Sin City Card Show — October",
+    "organizer": "Sin City Card Show",
+    "dateStart": "2026-10-17",
+    "dateEnd": "2026-10-18",
+    "categories": [
+      "general"
+    ],
+    "goals": [
+      "browse"
+    ],
+    "venue": {
+      "name": "Rio Hotel & Casino",
+      "address": "3700 W Flamingo Road, Las Vegas, NV 89103",
+      "city": "Las Vegas",
+      "status": "confirmed",
+      "sourceIds": [
+        "sin-schedule",
+        "rio-address"
+      ]
+    },
+    "parking": {
+      "status": "unknown",
+      "note": "Parking terms were not established from the event sources.",
+      "sourceIds": []
+    },
+    "sessions": [
+      {
+        "id": "sin-city-october-general-1",
+        "date": "2026-10-17",
+        "kind": "general",
+        "start": "10:00",
+        "end": "17:00",
+        "sourceIds": [
+          "sin-schedule"
+        ],
+        "status": "confirmed",
+        "access": "unpublished"
+      },
+      {
+        "id": "sin-city-october-general-2",
+        "date": "2026-10-18",
+        "kind": "general",
+        "start": "10:00",
+        "end": "17:00",
+        "sourceIds": [
+          "sin-schedule"
+        ],
+        "status": "confirmed",
+        "access": "unpublished"
+      }
+    ],
+    "tickets": [
+      {
+        "id": "admission-unpublished",
+        "label": "Admission not published",
+        "sessionKinds": [
+          "general"
+        ],
+        "adultCents": null,
+        "serviceFeeCents": null,
+        "feeStatus": "unknown",
+        "childrenFreeThrough": null,
+        "childPolicyKnown": false,
+        "purchaseMode": "either",
+        "coverage": "day",
+        "sourceIds": [
+          "sin-schedule"
+        ],
+        "note": "Visitor admission price, service fees and child admission rules are not published in the checked event source."
+      }
+    ],
+    "sources": [
+      {
+        "id": "sin-schedule",
+        "label": "Sin City official 2026 schedule",
+        "url": "https://sincitycardshow.com/",
+        "kind": "organizer",
+        "checkedAt": "2026-10-12",
+        "summary": "The live 2026 schedule publishes four remaining shows, their venues and visitor hours. Admission is not stated."
+      },
+      {
+        "id": "rio-address",
+        "label": "Rio official address",
+        "url": "https://www.riolasvegas.com/rio-revealed/faq/what-is-the-address-of-rio-hotel-and-casino",
+        "kind": "venue",
+        "checkedAt": "2026-10-12",
+        "summary": "Rio confirms 3700 W Flamingo Road, Las Vegas, NV 89103."
+      }
+    ],
+    "conflicts": [],
+    "services": [],
+    "notes": [
+      "The organizer describes a family-friendly trading-card community event. Specific card categories, child admission discounts and services were not established.",
+      "The complete schedule was checked in the live rendered page; a text-only extract can omit the show list."
+    ]
+  },
+  {
+    "id": "front-row-october",
+    "name": "Front Row Card Show — Las Vegas",
+    "organizer": "Front Row Card Show",
+    "dateStart": "2026-10-24",
+    "dateEnd": "2026-10-25",
+    "categories": [
+      "pokemon",
+      "sports",
+      "magic",
+      "yugioh",
+      "lorcana",
+      "general"
+    ],
+    "goals": [
+      "browse",
+      "trade",
+      "grading"
+    ],
+    "venue": {
+      "name": "Rio Hotel & Casino — Convention Center",
+      "address": "3700 W Flamingo Road, Las Vegas, NV 89103",
+      "city": "Las Vegas",
+      "status": "confirmed",
+      "sourceIds": [
+        "front-row-event",
+        "front-row-parking"
+      ]
+    },
+    "parking": {
+      "status": "free",
+      "note": "The organizer publishes free parking at the Rio Convention Center.",
+      "sourceIds": [
+        "front-row-parking"
+      ]
+    },
+    "sessions": [
+      {
+        "id": "front-row-sat-general",
+        "date": "2026-10-24",
+        "kind": "general",
+        "start": "11:00",
+        "end": "17:00",
+        "sourceIds": [
+          "front-row-event",
+          "front-row-tickets"
+        ],
+        "status": "confirmed",
+        "access": "ticket"
+      },
+      {
+        "id": "front-row-sat-vip",
+        "date": "2026-10-24",
+        "kind": "vip",
+        "start": "10:00",
+        "end": "17:00",
+        "sourceIds": [
+          "front-row-event",
+          "front-row-tickets"
+        ],
+        "status": "confirmed",
+        "access": "ticket"
+      },
+      {
+        "id": "front-row-sat-trade",
+        "date": "2026-10-24",
+        "kind": "trade",
+        "start": "17:00",
+        "end": "21:00",
+        "sourceIds": [
+          "front-row-event"
+        ],
+        "status": "confirmed",
+        "access": "attendees-only",
+        "note": "The organizer describes trade-night entry as free for attendees. Admission to the show is still required; this is not a standalone public-free session."
+      },
+      {
+        "id": "front-row-sun-general",
+        "date": "2026-10-25",
+        "kind": "general",
+        "start": "11:00",
+        "end": "17:00",
+        "sourceIds": [
+          "front-row-event",
+          "front-row-tickets"
+        ],
+        "status": "confirmed",
+        "access": "ticket"
+      },
+      {
+        "id": "front-row-sun-vip",
+        "date": "2026-10-25",
+        "kind": "vip",
+        "start": "10:00",
+        "end": "17:00",
+        "sourceIds": [
+          "front-row-event",
+          "front-row-tickets"
+        ],
+        "status": "confirmed",
+        "access": "ticket"
+      }
+    ],
+    "tickets": [
+      {
+        "id": "front-row-ga-advance",
+        "label": "General admission — advance, one day",
+        "sessionKinds": [
+          "general",
+          "trade"
+        ],
+        "adultCents": 1000,
+        "serviceFeeCents": 79,
+        "feeStatus": "known",
+        "childrenFreeThrough": 10,
+        "childPolicyKnown": true,
+        "purchaseMode": "advance",
+        "coverage": "day",
+        "sourceIds": [
+          "front-row-event",
+          "front-row-tickets"
+        ],
+        "salesEndDate": "2026-10-23",
+        "note": "One-day online ticket: $10 plus $0.79 service fee. Advance sales end at midnight Friday, October 23. Trade-night access is for show attendees."
+      },
+      {
+        "id": "front-row-ga-door",
+        "label": "General admission — door, one day",
+        "sessionKinds": [
+          "general",
+          "trade"
+        ],
+        "adultCents": 1500,
+        "serviceFeeCents": null,
+        "feeStatus": "unknown",
+        "childrenFreeThrough": 10,
+        "childPolicyKnown": true,
+        "purchaseMode": "door",
+        "coverage": "day",
+        "sourceIds": [
+          "front-row-event"
+        ],
+        "note": "Advertised door price is $15. Any door service fee is unpublished."
+      },
+      {
+        "id": "front-row-vip-day-advance",
+        "label": "VIP — advance, one day",
+        "sessionKinds": [
+          "general",
+          "vip",
+          "trade"
+        ],
+        "adultCents": 2000,
+        "serviceFeeCents": 79,
+        "feeStatus": "known",
+        "childrenFreeThrough": 10,
+        "childPolicyKnown": true,
+        "purchaseMode": "advance",
+        "coverage": "day",
+        "sourceIds": [
+          "front-row-event",
+          "front-row-tickets"
+        ],
+        "salesEndDate": "2026-10-23"
+      },
+      {
+        "id": "front-row-vip-weekend-advance",
+        "label": "VIP — advance, both days",
+        "sessionKinds": [
+          "general",
+          "vip",
+          "trade"
+        ],
+        "adultCents": 2500,
+        "serviceFeeCents": 79,
+        "feeStatus": "known",
+        "childrenFreeThrough": 10,
+        "childPolicyKnown": true,
+        "purchaseMode": "advance",
+        "coverage": "weekend",
+        "sourceIds": [
+          "front-row-event",
+          "front-row-tickets"
+        ],
+        "salesEndDate": "2026-10-23",
+        "note": "The $0.79 service fee is shown for one two-day VIP ticket, not once per day."
+      },
+      {
+        "id": "front-row-vip-day-door",
+        "label": "VIP — door, one day",
+        "sessionKinds": [
+          "general",
+          "vip",
+          "trade"
+        ],
+        "adultCents": 2500,
+        "serviceFeeCents": null,
+        "feeStatus": "unknown",
+        "childrenFreeThrough": 10,
+        "childPolicyKnown": true,
+        "purchaseMode": "door",
+        "coverage": "day",
+        "sourceIds": [
+          "front-row-event"
+        ]
+      },
+      {
+        "id": "front-row-vip-weekend-door",
+        "label": "VIP — door, both days",
+        "sessionKinds": [
+          "general",
+          "vip",
+          "trade"
+        ],
+        "adultCents": 3000,
+        "serviceFeeCents": null,
+        "feeStatus": "unknown",
+        "childrenFreeThrough": 10,
+        "childPolicyKnown": true,
+        "purchaseMode": "door",
+        "coverage": "weekend",
+        "sourceIds": [
+          "front-row-event"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "front-row-event",
+        "label": "Front Row official Las Vegas event",
+        "url": "https://frontrowcardshow.com/collections/las-vegas",
+        "kind": "organizer",
+        "checkedAt": "2026-10-12",
+        "summary": "Publishes both days, GA/VIP hours, attendee trade night, ticket prices, child cutoff and named submission services."
+      },
+      {
+        "id": "front-row-tickets",
+        "label": "Front Row official Leap tickets",
+        "url": "https://events.leapevents.com/event/front-row-card-show-las-vegas-2026-october-24-25",
+        "kind": "ticketing",
+        "checkedAt": "2026-10-12",
+        "summary": "Lists day-specific tickets and a $0.79 online service fee for GA, one-day VIP and two-day VIP."
+      },
+      {
+        "id": "front-row-parking",
+        "label": "Front Row official parking information",
+        "url": "https://frontrowcardshow.com/pages/parking-and-transportation-information",
+        "kind": "organizer",
+        "checkedAt": "2026-10-12",
+        "summary": "Publishes free parking at the Rio Convention Center for its Las Vegas show."
+      }
+    ],
+    "conflicts": [],
+    "services": [
+      {
+        "label": "Card grading submissions",
+        "detail": "The organizer lists CGC and Beckett accepting submissions, and Paradise Breaks accepting PSA submissions. This does not promise on-site card grading or a turnaround time.",
+        "sourceIds": [
+          "front-row-event",
+          "front-row-tickets"
+        ]
+      },
+      {
+        "label": "Autograph authentication",
+        "detail": "The organizer lists JSA for on-site autograph authentication and advises bringing items early.",
+        "sourceIds": [
+          "front-row-event",
+          "front-row-tickets"
+        ]
+      },
+      {
+        "label": "Children’s hobby activity",
+        "detail": "The organizer advertises a Hobby Hunt for children aged 10 and under.",
+        "sourceIds": [
+          "front-row-event"
+        ]
+      }
+    ],
+    "notes": [
+      "Children aged 10 and under enter free with an adult.",
+      "Ticket prices and advertised services do not establish which individual cards or vendors will be available."
+    ]
+  },
+  {
+    "id": "sin-city-after-hours",
+    "name": "Sin City Card Show — After Hours",
+    "organizer": "Sin City Card Show",
+    "dateStart": "2026-11-04",
+    "dateEnd": "2026-11-05",
+    "categories": [
+      "general"
+    ],
+    "goals": [
+      "browse"
+    ],
+    "venue": {
+      "name": "Silverton Casino Lodge",
+      "address": "3333 Blue Diamond Road, Las Vegas, NV 89139",
+      "city": "Las Vegas",
+      "status": "confirmed",
+      "sourceIds": [
+        "sin-schedule",
+        "silverton-venue"
+      ]
+    },
+    "parking": {
+      "status": "free",
+      "note": "Silverton publishes free parking; an event-specific entrance is not stated.",
+      "sourceIds": [
+        "silverton-venue"
+      ]
+    },
+    "sessions": [
+      {
+        "id": "sin-city-after-hours-general-1",
+        "date": "2026-11-04",
+        "kind": "general",
+        "start": "16:00",
+        "end": "21:00",
+        "sourceIds": [
+          "sin-schedule"
+        ],
+        "status": "confirmed",
+        "access": "unpublished"
+      },
+      {
+        "id": "sin-city-after-hours-general-2",
+        "date": "2026-11-05",
+        "kind": "general",
+        "start": "16:00",
+        "end": "21:00",
+        "sourceIds": [
+          "sin-schedule"
+        ],
+        "status": "confirmed",
+        "access": "unpublished"
+      }
+    ],
+    "tickets": [
+      {
+        "id": "admission-unpublished",
+        "label": "Admission not published",
+        "sessionKinds": [
+          "general"
+        ],
+        "adultCents": null,
+        "serviceFeeCents": null,
+        "feeStatus": "unknown",
+        "childrenFreeThrough": null,
+        "childPolicyKnown": false,
+        "purchaseMode": "either",
+        "coverage": "day",
+        "sourceIds": [
+          "sin-schedule"
+        ],
+        "note": "Visitor admission price, service fees and child admission rules are not published in the checked event source."
+      }
+    ],
+    "sources": [
+      {
+        "id": "sin-schedule",
+        "label": "Sin City official 2026 schedule",
+        "url": "https://sincitycardshow.com/",
+        "kind": "organizer",
+        "checkedAt": "2026-10-12",
+        "summary": "The live 2026 schedule publishes four remaining shows, their venues and visitor hours. Admission is not stated."
+      },
+      {
+        "id": "silverton-venue",
+        "label": "Silverton official venue information",
+        "url": "https://silvertoncasino.com/",
+        "kind": "venue",
+        "checkedAt": "2026-10-12",
+        "summary": "Silverton confirms 3333 Blue Diamond Road, Las Vegas, NV 89139, and free parking."
+      }
+    ],
+    "conflicts": [],
+    "services": [],
+    "notes": [
+      "The organizer describes a family-friendly trading-card community event. Specific card categories, child admission discounts and services were not established.",
+      "The complete schedule was checked in the live rendered page; a text-only extract can omit the show list."
+    ]
+  },
+  {
+    "id": "pokekon-november",
+    "name": "PokeKon Las Vegas — The Graveyard Shift",
+    "organizer": "PokeKon Las Vegas",
+    "dateStart": "2026-11-06",
+    "dateEnd": "2026-11-07",
+    "categories": [
+      "pokemon",
+      "general"
+    ],
+    "goals": [
+      "browse",
+      "trade"
+    ],
+    "venue": {
+      "name": "Tuscany Hotel & Casino",
+      "address": "255 E Flamingo Road, Las Vegas, NV 89169",
+      "city": "Las Vegas",
+      "status": "confirmed",
+      "sourceIds": [
+        "pokekon-event"
+      ]
+    },
+    "parking": {
+      "status": "unknown",
+      "note": "Parking terms were not established from the event sources.",
+      "sourceIds": []
+    },
+    "sessions": [
+      {
+        "id": "pokekon-fri-general",
+        "date": "2026-11-06",
+        "kind": "general",
+        "start": "17:00",
+        "end": "22:00",
+        "sourceIds": [
+          "pokekon-event"
+        ],
+        "status": "confirmed",
+        "access": "ticket"
+      },
+      {
+        "id": "pokekon-fri-vip",
+        "date": "2026-11-06",
+        "kind": "vip",
+        "start": "16:00",
+        "end": "22:00",
+        "sourceIds": [
+          "pokekon-event"
+        ],
+        "status": "confirmed",
+        "access": "ticket"
+      },
+      {
+        "id": "pokekon-sat-general",
+        "date": "2026-11-07",
+        "kind": "general",
+        "start": "10:00",
+        "end": "19:00",
+        "sourceIds": [
+          "pokekon-event"
+        ],
+        "status": "confirmed",
+        "access": "ticket"
+      },
+      {
+        "id": "pokekon-sat-vip",
+        "date": "2026-11-07",
+        "kind": "vip",
+        "start": "09:00",
+        "end": "19:00",
+        "sourceIds": [
+          "pokekon-event"
+        ],
+        "status": "confirmed",
+        "access": "ticket"
+      }
+    ],
+    "tickets": [
+      {
+        "id": "pokekon-ga-day",
+        "label": "General admission — online, one day",
+        "sessionKinds": [
+          "general"
+        ],
+        "adultCents": 1500,
+        "serviceFeeCents": 99,
+        "feeStatus": "known",
+        "childrenFreeThrough": null,
+        "childPolicyKnown": false,
+        "purchaseMode": "advance",
+        "coverage": "day",
+        "sourceIds": [
+          "pokekon-event"
+        ],
+        "note": "The advertised $15.99 total comprises a $15 ticket and $0.99 fee. Child admission rules are unpublished."
+      },
+      {
+        "id": "pokekon-ga-weekend",
+        "label": "General admission — online, both days",
+        "sessionKinds": [
+          "general"
+        ],
+        "adultCents": 2500,
+        "serviceFeeCents": 125,
+        "feeStatus": "known",
+        "childrenFreeThrough": null,
+        "childPolicyKnown": false,
+        "purchaseMode": "advance",
+        "coverage": "weekend",
+        "sourceIds": [
+          "pokekon-event"
+        ]
+      },
+      {
+        "id": "pokekon-vip-weekend",
+        "label": "VIP — online, both days",
+        "sessionKinds": [
+          "general",
+          "vip"
+        ],
+        "adultCents": 4000,
+        "serviceFeeCents": 200,
+        "feeStatus": "known",
+        "childrenFreeThrough": null,
+        "childPolicyKnown": false,
+        "purchaseMode": "advance",
+        "coverage": "weekend",
+        "sourceIds": [
+          "pokekon-event"
+        ]
+      },
+      {
+        "id": "pokekon-door-unpublished",
+        "label": "Door admission — price unpublished",
+        "sessionKinds": [
+          "general",
+          "vip"
+        ],
+        "adultCents": null,
+        "serviceFeeCents": null,
+        "feeStatus": "unknown",
+        "childrenFreeThrough": null,
+        "childPolicyKnown": false,
+        "purchaseMode": "door",
+        "coverage": "day",
+        "sourceIds": [
+          "pokekon-event"
+        ],
+        "note": "The checked page publishes online offers; door pricing and child admission rules were not established."
+      }
+    ],
+    "sources": [
+      {
+        "id": "pokekon-event",
+        "label": "PokeKon official event and advertised tickets",
+        "url": "https://pokekonlv.com/",
+        "kind": "organizer",
+        "checkedAt": "2026-10-12",
+        "summary": "Publishes November 6–7 at Tuscany, per-day GA/VIP hours and advertised online ticket totals with fees."
+      }
+    ],
+    "conflicts": [],
+    "services": [],
+    "notes": [
+      "The organizer advertises Pokémon and TCG collecting and trading. Specific inventory is not confirmed.",
+      "A separately advertised game show is marked 21+; that restriction is not applied to the main trading-card show. The main show’s child admission rules remain unpublished."
+    ]
+  },
+  {
+    "id": "total-eclipse-november",
+    "name": "Total Eclipse — November Show",
+    "organizer": "Total Eclipse Card Show",
+    "dateStart": "2026-11-14",
+    "dateEnd": "2026-11-15",
+    "categories": [
+      "pokemon",
+      "sports",
+      "general"
+    ],
+    "goals": [
+      "browse",
+      "trade"
+    ],
+    "venue": {
+      "name": "The Boulevard Mall",
+      "address": "3528 S Maryland Parkway, Las Vegas, NV 89169",
+      "city": "Las Vegas",
+      "status": "confirmed",
+      "sourceIds": [
+        "eclipse-calendar"
+      ]
+    },
+    "parking": {
+      "status": "free",
+      "note": "The November event announcement explicitly advertises free parking.",
+      "sourceIds": [
+        "eclipse-calendar"
+      ]
+    },
+    "sessions": [
+      {
+        "id": "eclipse-nov-sat",
+        "date": "2026-11-14",
+        "kind": "general",
+        "start": "14:00",
+        "end": "20:00",
+        "sourceIds": [
+          "eclipse-calendar"
+        ],
+        "status": "confirmed",
+        "access": "public-free"
+      },
+      {
+        "id": "eclipse-nov-sun",
+        "date": "2026-11-15",
+        "kind": "general",
+        "start": "14:00",
+        "end": "20:00",
+        "sourceIds": [
+          "eclipse-calendar"
+        ],
+        "status": "confirmed",
+        "access": "public-free"
+      }
+    ],
+    "tickets": [
+      {
+        "id": "eclipse-nov-free",
+        "label": "Free public entry",
+        "sessionKinds": [
+          "general"
+        ],
+        "adultCents": 0,
+        "serviceFeeCents": 0,
+        "feeStatus": "none",
+        "childrenFreeThrough": null,
+        "childPolicyKnown": true,
+        "purchaseMode": "either",
+        "coverage": "session",
+        "sourceIds": [
+          "eclipse-calendar"
+        ],
+        "note": "The event advertises free entry without an age-based admission charge."
+      }
+    ],
+    "sources": [
+      {
+        "id": "eclipse-calendar",
+        "label": "Total Eclipse official event calendar",
+        "url": "https://www.totaleclipsecardshow.com/eventcalendar",
+        "kind": "organizer",
+        "checkedAt": "2026-10-12",
+        "summary": "The November 14 and 15 entries describe one two-day show, 2–8pm each day, with free entry and parking at Boulevard Mall."
+      }
+    ],
+    "conflicts": [],
+    "services": [],
+    "notes": [
+      "The two daily calendar entries are one canonical November show.",
+      "The organizer advertises Pokémon, sports cards and other TCG/collectibles; specific cards are not confirmed."
+    ]
+  },
+  {
+    "id": "sin-city-november",
+    "name": "Sin City Card Show — November",
+    "organizer": "Sin City Card Show",
+    "dateStart": "2026-11-21",
+    "dateEnd": "2026-11-22",
+    "categories": [
+      "general"
+    ],
+    "goals": [
+      "browse"
+    ],
+    "venue": {
+      "name": "Rio Hotel & Casino",
+      "address": "3700 W Flamingo Road, Las Vegas, NV 89103",
+      "city": "Las Vegas",
+      "status": "confirmed",
+      "sourceIds": [
+        "sin-schedule",
+        "rio-address"
+      ]
+    },
+    "parking": {
+      "status": "unknown",
+      "note": "Parking terms were not established from the event sources.",
+      "sourceIds": []
+    },
+    "sessions": [
+      {
+        "id": "sin-city-november-general-1",
+        "date": "2026-11-21",
+        "kind": "general",
+        "start": "10:00",
+        "end": "17:00",
+        "sourceIds": [
+          "sin-schedule"
+        ],
+        "status": "confirmed",
+        "access": "unpublished"
+      },
+      {
+        "id": "sin-city-november-general-2",
+        "date": "2026-11-22",
+        "kind": "general",
+        "start": "10:00",
+        "end": "17:00",
+        "sourceIds": [
+          "sin-schedule"
+        ],
+        "status": "confirmed",
+        "access": "unpublished"
+      }
+    ],
+    "tickets": [
+      {
+        "id": "admission-unpublished",
+        "label": "Admission not published",
+        "sessionKinds": [
+          "general"
+        ],
+        "adultCents": null,
+        "serviceFeeCents": null,
+        "feeStatus": "unknown",
+        "childrenFreeThrough": null,
+        "childPolicyKnown": false,
+        "purchaseMode": "either",
+        "coverage": "day",
+        "sourceIds": [
+          "sin-schedule"
+        ],
+        "note": "Visitor admission price, service fees and child admission rules are not published in the checked event source."
+      }
+    ],
+    "sources": [
+      {
+        "id": "sin-schedule",
+        "label": "Sin City official 2026 schedule",
+        "url": "https://sincitycardshow.com/",
+        "kind": "organizer",
+        "checkedAt": "2026-10-12",
+        "summary": "The live 2026 schedule publishes four remaining shows, their venues and visitor hours. Admission is not stated."
+      },
+      {
+        "id": "rio-address",
+        "label": "Rio official address",
+        "url": "https://www.riolasvegas.com/rio-revealed/faq/what-is-the-address-of-rio-hotel-and-casino",
+        "kind": "venue",
+        "checkedAt": "2026-10-12",
+        "summary": "Rio confirms 3700 W Flamingo Road, Las Vegas, NV 89103."
+      }
+    ],
+    "conflicts": [],
+    "services": [],
+    "notes": [
+      "The organizer describes a family-friendly trading-card community event. Specific card categories, child admission discounts and services were not established.",
+      "The complete schedule was checked in the live rendered page; a text-only extract can omit the show list."
+    ]
+  },
+  {
+    "id": "next-level-november",
+    "name": "Next Level Card Show",
+    "organizer": "Next Level Card Shows",
+    "dateStart": "2026-11-21",
+    "dateEnd": "2026-11-22",
+    "categories": [
+      "pokemon",
+      "sports",
+      "magic",
+      "one-piece",
+      "yugioh",
+      "general"
+    ],
+    "goals": [
+      "browse",
+      "trade"
+    ],
+    "venue": {
+      "name": "Santa Fe Station Hotel & Casino",
+      "address": "4949 N Rancho Drive, Las Vegas, NV 89130",
+      "city": "Las Vegas",
+      "status": "confirmed",
+      "indoorDirections": "Upstairs Banquet Rooms. The organizer directs visitors to the escalator or elevator next to the Oyster Bar.",
+      "sourceIds": [
+        "next-level-home",
+        "next-level-tickets",
+        "santa-fe-address",
+        "next-level-event"
+      ]
+    },
+    "parking": {
+      "status": "free",
+      "note": "The organizer publishes free parking and recommends the North Parking Garage or North Surface Parking Lot for the shortest walk.",
+      "sourceIds": [
+        "next-level-home"
+      ]
+    },
+    "sessions": [
+      {
+        "id": "next-level-sat-general",
+        "date": "2026-11-21",
+        "kind": "general",
+        "start": "10:00",
+        "end": "17:00",
+        "sourceIds": [
+          "next-level-home",
+          "next-level-tickets",
+          "next-level-event"
+        ],
+        "status": "confirmed",
+        "access": "ticket"
+      },
+      {
+        "id": "next-level-sat-vip",
+        "date": "2026-11-21",
+        "kind": "vip",
+        "start": "09:00",
+        "end": "17:00",
+        "sourceIds": [
+          "next-level-home",
+          "next-level-tickets",
+          "next-level-event"
+        ],
+        "status": "confirmed",
+        "access": "ticket",
+        "note": "Early Access starts at 09:00; general admission starts at 10:00."
+      },
+      {
+        "id": "next-level-sun-general",
+        "date": "2026-11-22",
+        "kind": "general",
+        "start": "10:00",
+        "end": "16:00",
+        "sourceIds": [
+          "next-level-home",
+          "next-level-tickets",
+          "next-level-event"
+        ],
+        "status": "conflict",
+        "access": "ticket",
+        "alternativeEnd": "17:00",
+        "note": "The official ticket page closes Sunday at 16:00; the organizer homepage says 17:00. Confirm Sunday hours before saving an arrival plan."
+      },
+      {
+        "id": "next-level-sun-vip",
+        "date": "2026-11-22",
+        "kind": "vip",
+        "start": "09:00",
+        "end": "16:00",
+        "sourceIds": [
+          "next-level-home",
+          "next-level-tickets",
+          "next-level-event"
+        ],
+        "status": "conflict",
+        "access": "ticket",
+        "alternativeEnd": "17:00",
+        "note": "Early entry is 09:00, but Sunday closing is disputed between 16:00 and 17:00."
+      }
+    ],
+    "tickets": [
+      {
+        "id": "next-level-ga-weekend",
+        "label": "General admission — weekend pass",
+        "sessionKinds": [
+          "general"
+        ],
+        "adultCents": 1000,
+        "serviceFeeCents": null,
+        "feeStatus": "unknown",
+        "childrenFreeThrough": 10,
+        "childPolicyKnown": true,
+        "purchaseMode": "either",
+        "coverage": "weekend",
+        "sourceIds": [
+          "next-level-home",
+          "next-level-event"
+        ],
+        "note": "A $10 pass covers both days; tickets are advertised online and at the show. Any service fee is unpublished."
+      },
+      {
+        "id": "next-level-vip-weekend",
+        "label": "Early Access — weekend pass",
+        "sessionKinds": [
+          "general",
+          "vip"
+        ],
+        "adultCents": 2000,
+        "serviceFeeCents": null,
+        "feeStatus": "unknown",
+        "childrenFreeThrough": 10,
+        "childPolicyKnown": true,
+        "purchaseMode": "either",
+        "coverage": "weekend",
+        "sourceIds": [
+          "next-level-home",
+          "next-level-event"
+        ],
+        "note": "Early Access is advertised at $20. Any service fee is unpublished."
+      }
+    ],
+    "sources": [
+      {
+        "id": "next-level-home",
+        "label": "Next Level official event and FAQ",
+        "url": "https://nextlevelcardshows.com/",
+        "kind": "organizer",
+        "checkedAt": "2026-10-12",
+        "summary": "Publishes prices, children’s free-admission cutoff, interests, parking and indoor directions, but contains conflicting Sunday hours and footer address."
+      },
+      {
+        "id": "next-level-tickets",
+        "label": "Next Level official Stride tickets",
+        "url": "https://www.strideevents.com/events/next-level-card-show/2026/tickets",
+        "kind": "ticketing",
+        "checkedAt": "2026-10-12",
+        "summary": "Confirms November 21–22 at 4949 N Rancho Drive, GA Saturday 10–5 and Sunday 10–4, with early entry at 9."
+      },
+      {
+        "id": "santa-fe-address",
+        "label": "Santa Fe Station official address",
+        "url": "https://santafestation.com/contact/",
+        "kind": "venue",
+        "checkedAt": "2026-10-12",
+        "summary": "The venue confirms 4949 N Rancho Drive, Las Vegas, NV 89130, independently of the organizer’s inconsistent footer."
+      },
+      {
+        "id": "next-level-event",
+        "label": "Next Level official November event detail",
+        "url": "https://nextlevelcardshows.com/card-shows/santa-fe-station-november-2026/",
+        "kind": "organizer",
+        "checkedAt": "2026-10-12",
+        "summary": "The event detail names November 21–22, general and early-access weekend offers, the child cutoff and correct venue, while its footer still supplies a contradictory address."
+      }
+    ],
+    "conflicts": [
+      {
+        "id": "next-level-sunday-close",
+        "field": "hours",
+        "summary": "Sunday closing differs by one hour between the organizer homepage and official ticket page.",
+        "claims": [
+          {
+            "sourceId": "next-level-home",
+            "text": "The homepage FAQ gives Sunday opening at 09:00 and closing at 17:00."
+          },
+          {
+            "sourceId": "next-level-tickets",
+            "text": "The ticket page gives Sunday general admission 10:00–16:00, with early entry at 09:00."
+          },
+          {
+            "sourceId": "next-level-event",
+            "text": "The event-detail page lists a Saturday/Sunday weekend offer with general hours 10:00–17:00 and Early Access 09:00–17:00."
+          }
+        ],
+        "severity": "blocking"
+      },
+      {
+        "id": "next-level-footer-address",
+        "field": "venue",
+        "summary": "The homepage footer gives a different street address. The FAQ and official tickets agree on 4949 N Rancho Drive.",
+        "claims": [
+          {
+            "sourceId": "next-level-home",
+            "text": "The FAQ names Santa Fe Station at 4949 N Rancho Drive; the footer instead gives 5155 Blue Diamond Road."
+          },
+          {
+            "sourceId": "next-level-tickets",
+            "text": "Official tickets name Santa Fe Station Hotel & Casino at 4949 N Rancho Drive."
+          },
+          {
+            "sourceId": "santa-fe-address",
+            "text": "Santa Fe Station’s own contact page confirms 4949 N Rancho Drive, Las Vegas, NV 89130."
+          }
+        ],
+        "severity": "notice"
+      }
+    ],
+    "services": [],
+    "notes": [
+      "Children aged 10 and under enter free with a paying adult.",
+      "The homepage FAQ’s 09:00 opening includes early access; it should not be used as the general-admission opening.",
+      "The planner uses the ticket page’s conservative Sunday end time and retains the conflicting 17:00 claim."
+    ]
+  },
+  {
+    "id": "trading-card-fest-december",
+    "name": "Las Vegas Trading Card Fest — Venue TBA",
+    "organizer": "Cards & More Expo",
+    "dateStart": "2026-12-04",
+    "dateEnd": "2026-12-06",
+    "categories": [
+      "general"
+    ],
+    "goals": [
+      "browse",
+      "trade"
+    ],
+    "venue": {
+      "name": "Venue to be announced",
+      "address": "Not announced",
+      "city": "Las Vegas",
+      "status": "tba",
+      "sourceIds": [
+        "fest-registration"
+      ]
+    },
+    "parking": {
+      "status": "unknown",
+      "note": "Parking terms were not established from the event sources.",
+      "sourceIds": []
+    },
+    "sessions": [
+      {
+        "id": "fest-fri-general",
+        "date": "2026-12-04",
+        "kind": "general",
+        "start": "16:30",
+        "end": "22:00",
+        "sourceIds": [
+          "fest-registration"
+        ],
+        "status": "confirmed",
+        "access": "ticket"
+      },
+      {
+        "id": "fest-fri-vip",
+        "date": "2026-12-04",
+        "kind": "vip",
+        "start": "16:00",
+        "end": "22:00",
+        "sourceIds": [
+          "fest-registration"
+        ],
+        "status": "confirmed",
+        "access": "ticket"
+      },
+      {
+        "id": "fest-sat-general",
+        "date": "2026-12-05",
+        "kind": "general",
+        "start": "10:00",
+        "end": "19:00",
+        "sourceIds": [
+          "fest-registration"
+        ],
+        "status": "confirmed",
+        "access": "ticket"
+      },
+      {
+        "id": "fest-sat-vip",
+        "date": "2026-12-05",
+        "kind": "vip",
+        "start": "09:30",
+        "end": "19:00",
+        "sourceIds": [
+          "fest-registration"
+        ],
+        "status": "confirmed",
+        "access": "ticket"
+      },
+      {
+        "id": "fest-sun-general",
+        "date": "2026-12-06",
+        "kind": "general",
+        "start": "10:00",
+        "end": "18:00",
+        "sourceIds": [
+          "fest-registration"
+        ],
+        "status": "confirmed",
+        "access": "ticket"
+      },
+      {
+        "id": "fest-sun-vip",
+        "date": "2026-12-06",
+        "kind": "vip",
+        "start": "09:30",
+        "end": "18:00",
+        "sourceIds": [
+          "fest-registration"
+        ],
+        "status": "confirmed",
+        "access": "ticket"
+      }
+    ],
+    "tickets": [
+      {
+        "id": "fest-ga-unresolved",
+        "label": "Adult admission — coverage unpublished",
+        "sessionKinds": [
+          "general"
+        ],
+        "adultCents": null,
+        "serviceFeeCents": null,
+        "feeStatus": "unknown",
+        "childrenFreeThrough": 12,
+        "childPolicyKnown": true,
+        "purchaseMode": "advance",
+        "coverage": "day",
+        "sourceIds": [
+          "fest-registration"
+        ],
+        "note": "Adult admission is advertised at $15, but whether that amount covers one day or all days is not established. No total is calculated from it."
+      },
+      {
+        "id": "fest-vip-three-days",
+        "label": "VIP Early Access — all three days",
+        "sessionKinds": [
+          "general",
+          "vip"
+        ],
+        "adultCents": 2500,
+        "serviceFeeCents": null,
+        "feeStatus": "unknown",
+        "childrenFreeThrough": 12,
+        "childPolicyKnown": true,
+        "purchaseMode": "advance",
+        "coverage": "weekend",
+        "sourceIds": [
+          "fest-registration"
+        ],
+        "note": "The published $25 VIP offer explicitly includes all three days. Service fees are unpublished; weekend coverage here denotes the whole multi-day show."
+      },
+      {
+        "id": "fest-door-unpublished",
+        "label": "Door admission — price unpublished",
+        "sessionKinds": [
+          "general",
+          "vip"
+        ],
+        "adultCents": null,
+        "serviceFeeCents": null,
+        "feeStatus": "unknown",
+        "childrenFreeThrough": null,
+        "childPolicyKnown": false,
+        "purchaseMode": "door",
+        "coverage": "day",
+        "sourceIds": [
+          "fest-registration"
+        ],
+        "note": "Visitor admission price, service fees and child admission rules are not published in the checked event source."
+      }
+    ],
+    "sources": [
+      {
+        "id": "fest-registration",
+        "label": "Organizer’s Eventzilla attendee listing",
+        "url": "https://www.eventzilla.net/e/las-vegas-trading-card-fest-attendee-registration-kids-12-and-under-are-free-2138672681",
+        "kind": "ticketing",
+        "checkedAt": "2026-10-12",
+        "summary": "Announces December 4–6 with per-day GA/VIP hours and admission offers, but explicitly leaves the physical location TBA."
+      }
+    ],
+    "conflicts": [
+      {
+        "id": "fest-location-tba",
+        "field": "venue",
+        "summary": "The physical venue has not been announced, so an arrival plan cannot be saved.",
+        "claims": [
+          {
+            "sourceId": "fest-registration",
+            "text": "The attendee listing states that the location is TBA."
+          }
+        ],
+        "severity": "blocking"
+      }
+    ],
+    "services": [],
+    "notes": [
+      "This announced event is separate from Genesis Card Show on December 5–6.",
+      "Children aged 12 and under are advertised as free with a paid adult.",
+      "A Saturday VIP/vendor trade night starts at 18:30, but its ending time is unpublished and is not modeled as a visit session.",
+      "The organizer’s event index labels the listing virtual, while the attendee description says location TBA. The physical venue and operational registration status remain unverified."
+    ]
+  },
+  {
+    "id": "genesis-december",
+    "name": "Genesis Card Show — Las Vegas",
+    "organizer": "Genesis Card Show LLC",
+    "dateStart": "2026-12-05",
+    "dateEnd": "2026-12-06",
+    "categories": [
+      "general"
+    ],
+    "goals": [
+      "browse",
+      "trade"
+    ],
+    "venue": {
+      "name": "World Market Center",
+      "address": "475 S Grand Central Parkway, Las Vegas, NV 89106",
+      "city": "Las Vegas",
+      "status": "confirmed",
+      "sourceIds": [
+        "genesis-event"
+      ]
+    },
+    "parking": {
+      "status": "unknown",
+      "note": "Parking terms were not established from the event sources.",
+      "sourceIds": []
+    },
+    "sessions": [
+      {
+        "id": "genesis-sat-trade",
+        "date": "2026-12-05",
+        "kind": "trade",
+        "start": "18:00",
+        "end": "22:00",
+        "sourceIds": [
+          "genesis-event"
+        ],
+        "status": "confirmed",
+        "access": "public-free",
+        "note": "The organizer explicitly describes Saturday trade night as free to the public."
+      },
+      {
+        "id": "genesis-sun-general",
+        "date": "2026-12-06",
+        "kind": "general",
+        "start": "11:00",
+        "end": "17:00",
+        "sourceIds": [
+          "genesis-event"
+        ],
+        "status": "confirmed",
+        "access": "ticket"
+      },
+      {
+        "id": "genesis-sun-vip",
+        "date": "2026-12-06",
+        "kind": "vip",
+        "start": "10:00",
+        "end": "17:00",
+        "sourceIds": [
+          "genesis-event"
+        ],
+        "status": "confirmed",
+        "access": "ticket"
+      }
+    ],
+    "tickets": [
+      {
+        "id": "genesis-ga-day-online",
+        "label": "General admission — online, one day",
+        "sessionKinds": [
+          "general"
+        ],
+        "adultCents": 500,
+        "serviceFeeCents": 13,
+        "feeStatus": "known",
+        "childrenFreeThrough": null,
+        "childPolicyKnown": false,
+        "purchaseMode": "advance",
+        "coverage": "day",
+        "sourceIds": [
+          "genesis-event"
+        ]
+      },
+      {
+        "id": "genesis-ga-day-door",
+        "label": "General admission — door, one day",
+        "sessionKinds": [
+          "general"
+        ],
+        "adultCents": 500,
+        "serviceFeeCents": null,
+        "feeStatus": "unknown",
+        "childrenFreeThrough": null,
+        "childPolicyKnown": false,
+        "purchaseMode": "door",
+        "coverage": "day",
+        "sourceIds": [
+          "genesis-event"
+        ],
+        "note": "The organizer states the same $5 base price online and at the door; any door fee is unpublished."
+      },
+      {
+        "id": "genesis-ga-weekend-online",
+        "label": "General admission — online, both days",
+        "sessionKinds": [
+          "general"
+        ],
+        "adultCents": 800,
+        "serviceFeeCents": 20,
+        "feeStatus": "known",
+        "childrenFreeThrough": null,
+        "childPolicyKnown": false,
+        "purchaseMode": "advance",
+        "coverage": "weekend",
+        "sourceIds": [
+          "genesis-event"
+        ],
+        "note": "The two-day GA ticket is explicitly online-only."
+      },
+      {
+        "id": "genesis-vip-day-online",
+        "label": "VIP — online, one day",
+        "sessionKinds": [
+          "general",
+          "vip"
+        ],
+        "adultCents": 1500,
+        "serviceFeeCents": 38,
+        "feeStatus": "known",
+        "childrenFreeThrough": null,
+        "childPolicyKnown": false,
+        "purchaseMode": "advance",
+        "coverage": "day",
+        "sourceIds": [
+          "genesis-event"
+        ]
+      },
+      {
+        "id": "genesis-vip-sunday-door",
+        "label": "VIP — Sunday at the door",
+        "sessionKinds": [
+          "general",
+          "vip"
+        ],
+        "adultCents": 1500,
+        "serviceFeeCents": null,
+        "feeStatus": "unknown",
+        "childrenFreeThrough": null,
+        "childPolicyKnown": false,
+        "purchaseMode": "door",
+        "coverage": "day",
+        "sourceIds": [
+          "genesis-event"
+        ],
+        "note": "Sunday door VIP is $15; Saturday door VIP is $20. Saturday daytime sessions are omitted because their closing time is unpublished."
+      },
+      {
+        "id": "genesis-vip-weekend-online",
+        "label": "VIP — online, both days",
+        "sessionKinds": [
+          "general",
+          "vip"
+        ],
+        "adultCents": 2000,
+        "serviceFeeCents": 50,
+        "feeStatus": "known",
+        "childrenFreeThrough": null,
+        "childPolicyKnown": false,
+        "purchaseMode": "advance",
+        "coverage": "weekend",
+        "sourceIds": [
+          "genesis-event"
+        ]
+      },
+      {
+        "id": "genesis-trade-free",
+        "label": "Saturday trade night — free public entry",
+        "sessionKinds": [
+          "trade"
+        ],
+        "adultCents": 0,
+        "serviceFeeCents": 0,
+        "feeStatus": "none",
+        "childrenFreeThrough": null,
+        "childPolicyKnown": true,
+        "purchaseMode": "either",
+        "coverage": "session",
+        "sourceIds": [
+          "genesis-event"
+        ],
+        "note": "Free public entry applies to the Saturday 18:00–22:00 trade session; it is separate from paid daytime admission."
+      }
+    ],
+    "sources": [
+      {
+        "id": "genesis-event",
+        "label": "Genesis official Las Vegas event and tickets",
+        "url": "https://www.genesiscardshow.com/event-details-registration/las-vegas-december-5th-6th-550-tables-at-the-world-market-center",
+        "kind": "organizer",
+        "checkedAt": "2026-10-12",
+        "summary": "Confirms December 5–6 at World Market Center, GA entry at 11, VIP at 10, online ticket fees and Saturday public-free trade night 6–10pm."
+      }
+    ],
+    "conflicts": [],
+    "services": [],
+    "notes": [
+      "The overall event timestamp starts Saturday at 10:00; ticket descriptions specify general admission starts at 11:00 and VIP at 10:00.",
+      "Saturday daytime GA/VIP sessions are omitted because a daily closing time is not separately published. The overall event ends Sunday at 17:00.",
+      "Child discounts, parking terms and specific card categories were not established. The organizer describes an all-ages show, which does not establish free child admission.",
+      "The street address is the organizer’s published address; an exact hall entrance is not established."
+    ]
+  },
+  {
+    "id": "total-eclipse-december",
+    "name": "Total Eclipse — December Show",
+    "organizer": "Total Eclipse Card Show",
+    "dateStart": "2026-12-12",
+    "dateEnd": "2026-12-12",
+    "categories": [
+      "pokemon",
+      "sports",
+      "general"
+    ],
+    "goals": [
+      "browse",
+      "trade"
+    ],
+    "venue": {
+      "name": "The Boulevard Mall",
+      "address": "3528 S Maryland Parkway, Las Vegas, NV 89169",
+      "city": "Las Vegas",
+      "status": "confirmed",
+      "sourceIds": [
+        "eclipse-calendar"
+      ]
+    },
+    "parking": {
+      "status": "free",
+      "note": "The December event announcement explicitly advertises free parking.",
+      "sourceIds": [
+        "eclipse-calendar"
+      ]
+    },
+    "sessions": [
+      {
+        "id": "eclipse-dec-sat",
+        "date": "2026-12-12",
+        "kind": "general",
+        "start": "14:00",
+        "end": "20:00",
+        "sourceIds": [
+          "eclipse-calendar"
+        ],
+        "status": "confirmed",
+        "access": "public-free"
+      }
+    ],
+    "tickets": [
+      {
+        "id": "eclipse-dec-free",
+        "label": "Free public entry",
+        "sessionKinds": [
+          "general"
+        ],
+        "adultCents": 0,
+        "serviceFeeCents": 0,
+        "feeStatus": "none",
+        "childrenFreeThrough": null,
+        "childPolicyKnown": true,
+        "purchaseMode": "either",
+        "coverage": "session",
+        "sourceIds": [
+          "eclipse-calendar"
+        ],
+        "note": "The event advertises free entry without an age-based admission charge."
+      }
+    ],
+    "sources": [
+      {
+        "id": "eclipse-calendar",
+        "label": "Total Eclipse official event calendar",
+        "url": "https://www.totaleclipsecardshow.com/eventcalendar",
+        "kind": "organizer",
+        "checkedAt": "2026-10-12",
+        "summary": "The December 12 entry publishes 2–8pm, free entry and free parking at Boulevard Mall."
+      }
+    ],
+    "conflicts": [],
+    "services": [],
+    "notes": [
+      "The published date and title establish one December day. A generic description mentioning two days is not used to invent a second date.",
+      "The organizer advertises Pokémon, sports cards and other TCG/collectibles; specific cards are not confirmed."
+    ]
+  },
+  {
+    "id": "sin-city-december",
+    "name": "Sin City Card Show — December",
+    "organizer": "Sin City Card Show",
+    "dateStart": "2026-12-19",
+    "dateEnd": "2026-12-20",
+    "categories": [
+      "general"
+    ],
+    "goals": [
+      "browse"
+    ],
+    "venue": {
+      "name": "Rio Hotel & Casino",
+      "address": "3700 W Flamingo Road, Las Vegas, NV 89103",
+      "city": "Las Vegas",
+      "status": "confirmed",
+      "sourceIds": [
+        "sin-schedule",
+        "rio-address"
+      ]
+    },
+    "parking": {
+      "status": "unknown",
+      "note": "Parking terms were not established from the event sources.",
+      "sourceIds": []
+    },
+    "sessions": [
+      {
+        "id": "sin-city-december-general-1",
+        "date": "2026-12-19",
+        "kind": "general",
+        "start": "10:00",
+        "end": "17:00",
+        "sourceIds": [
+          "sin-schedule"
+        ],
+        "status": "confirmed",
+        "access": "unpublished"
+      },
+      {
+        "id": "sin-city-december-general-2",
+        "date": "2026-12-20",
+        "kind": "general",
+        "start": "10:00",
+        "end": "17:00",
+        "sourceIds": [
+          "sin-schedule"
+        ],
+        "status": "confirmed",
+        "access": "unpublished"
+      }
+    ],
+    "tickets": [
+      {
+        "id": "admission-unpublished",
+        "label": "Admission not published",
+        "sessionKinds": [
+          "general"
+        ],
+        "adultCents": null,
+        "serviceFeeCents": null,
+        "feeStatus": "unknown",
+        "childrenFreeThrough": null,
+        "childPolicyKnown": false,
+        "purchaseMode": "either",
+        "coverage": "day",
+        "sourceIds": [
+          "sin-schedule"
+        ],
+        "note": "Visitor admission price, service fees and child admission rules are not published in the checked event source."
+      }
+    ],
+    "sources": [
+      {
+        "id": "sin-schedule",
+        "label": "Sin City official 2026 schedule",
+        "url": "https://sincitycardshow.com/",
+        "kind": "organizer",
+        "checkedAt": "2026-10-12",
+        "summary": "The live 2026 schedule publishes four remaining shows, their venues and visitor hours. Admission is not stated."
+      },
+      {
+        "id": "rio-address",
+        "label": "Rio official address",
+        "url": "https://www.riolasvegas.com/rio-revealed/faq/what-is-the-address-of-rio-hotel-and-casino",
+        "kind": "venue",
+        "checkedAt": "2026-10-12",
+        "summary": "Rio confirms 3700 W Flamingo Road, Las Vegas, NV 89103."
+      }
+    ],
+    "conflicts": [],
+    "services": [],
+    "notes": [
+      "The organizer describes a family-friendly trading-card community event. Specific card categories, child admission discounts and services were not established.",
+      "The complete schedule was checked in the live rendered page; a text-only extract can omit the show list."
+    ]
+  }
+]

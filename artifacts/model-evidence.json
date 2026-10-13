@@ -1,0 +1,3944 @@
+{
+  "pipelineVersion": "4",
+  "model": "qwen3.5:4b-q4_K_M",
+  "runAt": "2026-10-13T02:53:04.483Z",
+  "ollamaVersion": "0.35.0",
+  "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+  "sizeBytes": 3324173934,
+  "modifiedAt": "2026-10-09T16:17:04.2171258-07:00",
+  "localEndpoint": "http://127.0.0.1:11434",
+  "settings": {
+    "think": false,
+    "temperature": 0,
+    "seed": 24,
+    "schemaConstrained": true
+  },
+  "license": {
+    "name": "Apache-2.0",
+    "modelCard": "https://huggingface.co/Qwen/Qwen3.5-4B",
+    "checkedAt": "2026-10-13"
+  },
+  "elapsedMs": 120658,
+  "cases": [
+    {
+      "id": "front-row-event",
+      "eventId": "front-row-october",
+      "url": "https://frontrowcardshow.com/collections/las-vegas",
+      "status": "failed",
+      "extractionStatus": "rejected",
+      "reviewStatus": "unreviewed",
+      "elapsedMs": 43734,
+      "model": "qwen3.5:4b-q4_K_M",
+      "modelTiming": {
+        "totalDurationNs": 43718260600,
+        "evalCount": 1622
+      },
+      "inputTextSha256": "053f65a42598ab50d4131edeb9de7225848e2918d564afc6a4c6b3d46b0ac1f6",
+      "sourceLineCount": 11,
+      "fieldChecks": [
+        {
+          "name": "accepted proposal available",
+          "status": "failed"
+        }
+      ],
+      "errors": [
+        "sessions: date and weekday disagree",
+        "sessions: date and weekday disagree",
+        "sessions: date and weekday disagree",
+        "sessions: date and weekday disagree",
+        "sessions: date and weekday disagree"
+      ],
+      "evidenceChecks": [
+        {
+          "path": "eventName",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L1"
+          ]
+        },
+        {
+          "path": "venue",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L2"
+          ]
+        },
+        {
+          "path": "address",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L3"
+          ]
+        },
+        {
+          "path": "childInclusiveCutoff",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L11"
+          ]
+        },
+        {
+          "path": "sessions[0]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L5"
+          ]
+        },
+        {
+          "path": "sessions[1]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L5"
+          ]
+        },
+        {
+          "path": "sessions[2]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L6"
+          ]
+        },
+        {
+          "path": "sessions[3]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L8"
+          ]
+        },
+        {
+          "path": "sessions[4]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L8"
+          ]
+        },
+        {
+          "path": "admission[0]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L9"
+          ]
+        },
+        {
+          "path": "admission[1]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L9"
+          ]
+        },
+        {
+          "path": "admission[2]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L10"
+          ]
+        },
+        {
+          "path": "admission[3]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L10"
+          ]
+        },
+        {
+          "path": "admission[4]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L10"
+          ]
+        },
+        {
+          "path": "admission[5]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L10"
+          ]
+        }
+      ],
+      "acceptedProposal": null
+    },
+    {
+      "id": "front-row-tickets",
+      "eventId": "front-row-october",
+      "url": "https://events.leapevents.com/event/front-row-card-show-las-vegas-2026-october-24-25",
+      "status": "failed",
+      "extractionStatus": "evidence_validated_needs_review",
+      "reviewStatus": "unreviewed",
+      "elapsedMs": 37978,
+      "model": "qwen3.5:4b-q4_K_M",
+      "modelTiming": {
+        "totalDurationNs": 37974511100,
+        "evalCount": 1577
+      },
+      "inputTextSha256": "bf8282cff961da9b7e55b703e23e63ee46e664389b42018836f6a35b0e79bf0c",
+      "sourceLineCount": 12,
+      "fieldChecks": [
+        {
+          "name": "venue",
+          "status": "passed"
+        },
+        {
+          "name": "childInclusiveCutoff",
+          "status": "passed"
+        },
+        {
+          "name": "required session 1: saturday/general",
+          "status": "passed"
+        },
+        {
+          "name": "required session 2: sunday/general",
+          "status": "passed"
+        },
+        {
+          "name": "required session 3: saturday/trade",
+          "status": "passed"
+        },
+        {
+          "name": "required session 4: saturday/vip",
+          "status": "failed"
+        },
+        {
+          "name": "required session 5: sunday/vip",
+          "status": "failed"
+        },
+        {
+          "name": "required ticket 1: general/single_day/undefined",
+          "status": "passed"
+        },
+        {
+          "name": "required ticket 2: vip/single_day/undefined",
+          "status": "passed"
+        },
+        {
+          "name": "required ticket 3: vip/weekend/undefined",
+          "status": "passed"
+        },
+        {
+          "name": "admission count",
+          "status": "failed"
+        }
+      ],
+      "errors": [],
+      "evidenceChecks": [
+        {
+          "path": "eventName",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L1"
+          ]
+        },
+        {
+          "path": "venue",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L2"
+          ]
+        },
+        {
+          "path": "address",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L3"
+          ]
+        },
+        {
+          "path": "childInclusiveCutoff",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L9"
+          ]
+        },
+        {
+          "path": "sessions[0]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L5"
+          ]
+        },
+        {
+          "path": "sessions[1]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L5"
+          ]
+        },
+        {
+          "path": "sessions[2]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L6"
+          ]
+        },
+        {
+          "path": "sessions[3]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L8"
+          ]
+        },
+        {
+          "path": "sessions[4]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L8"
+          ]
+        },
+        {
+          "path": "admission[0]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L10"
+          ]
+        },
+        {
+          "path": "admission[1]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L10"
+          ]
+        },
+        {
+          "path": "admission[2]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L11"
+          ]
+        },
+        {
+          "path": "admission[3]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L11"
+          ]
+        },
+        {
+          "path": "admission[4]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L12"
+          ]
+        },
+        {
+          "path": "admission[5]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L12"
+          ]
+        }
+      ],
+      "acceptedProposal": {
+        "eventName": {
+          "value": "Front Row Card Show",
+          "evidence": {
+            "lineIds": [
+              "L1"
+            ],
+            "method": "exact_quote"
+          }
+        },
+        "venue": {
+          "value": "RIO HOTEL & CASINO",
+          "evidence": {
+            "lineIds": [
+              "L2"
+            ],
+            "method": "exact_quote"
+          }
+        },
+        "address": {
+          "value": "3700 W. Flamingo Road, Las Vegas, NV 89103",
+          "evidence": {
+            "lineIds": [
+              "L3"
+            ],
+            "method": "exact_quote"
+          }
+        },
+        "sessions": [
+          {
+            "date": "2026-10-24",
+            "day": "saturday",
+            "kind": "general",
+            "start": "11:00",
+            "end": "17:00",
+            "evidence": {
+              "lineIds": [
+                "L5"
+              ],
+              "method": "exact_quote"
+            }
+          },
+          {
+            "date": "2026-10-24",
+            "day": "saturday",
+            "kind": "vip",
+            "start": "10:00",
+            "end": "17:00",
+            "evidence": {
+              "lineIds": [
+                "L5"
+              ],
+              "method": "exact_quote"
+            }
+          },
+          {
+            "date": "2026-10-24",
+            "day": "saturday",
+            "kind": "trade",
+            "start": "17:00",
+            "end": "21:00",
+            "evidence": {
+              "lineIds": [
+                "L6"
+              ],
+              "method": "exact_quote"
+            }
+          },
+          {
+            "date": "2026-10-25",
+            "day": "sunday",
+            "kind": "general",
+            "start": "11:00",
+            "end": "17:00",
+            "evidence": {
+              "lineIds": [
+                "L8"
+              ],
+              "method": "exact_quote"
+            }
+          },
+          {
+            "date": "2026-10-25",
+            "day": "sunday",
+            "kind": "vip",
+            "start": "10:00",
+            "end": "17:00",
+            "evidence": {
+              "lineIds": [
+                "L8"
+              ],
+              "method": "exact_quote"
+            }
+          }
+        ],
+        "admission": [
+          {
+            "kind": "general",
+            "purchase": "advance",
+            "scope": "single_day",
+            "adultFeeCents": 1000,
+            "serviceFeeCents": 79,
+            "evidence": {
+              "lineIds": [
+                "L10"
+              ],
+              "method": "exact_quote"
+            }
+          },
+          {
+            "kind": "general",
+            "purchase": "door",
+            "scope": "single_day",
+            "adultFeeCents": 1000,
+            "serviceFeeCents": 79,
+            "evidence": {
+              "lineIds": [
+                "L10"
+              ],
+              "method": "exact_quote"
+            }
+          },
+          {
+            "kind": "vip",
+            "purchase": "advance",
+            "scope": "single_day",
+            "adultFeeCents": 2000,
+            "serviceFeeCents": 79,
+            "evidence": {
+              "lineIds": [
+                "L11"
+              ],
+              "method": "exact_quote"
+            }
+          },
+          {
+            "kind": "vip",
+            "purchase": "door",
+            "scope": "single_day",
+            "adultFeeCents": 2000,
+            "serviceFeeCents": 79,
+            "evidence": {
+              "lineIds": [
+                "L11"
+              ],
+              "method": "exact_quote"
+            }
+          },
+          {
+            "kind": "vip",
+            "purchase": "advance",
+            "scope": "weekend",
+            "adultFeeCents": 2500,
+            "serviceFeeCents": 79,
+            "evidence": {
+              "lineIds": [
+                "L12"
+              ],
+              "method": "exact_quote"
+            }
+          },
+          {
+            "kind": "vip",
+            "purchase": "door",
+            "scope": "weekend",
+            "adultFeeCents": 2500,
+            "serviceFeeCents": 79,
+            "evidence": {
+              "lineIds": [
+                "L12"
+              ],
+              "method": "exact_quote"
+            }
+          }
+        ],
+        "childInclusiveCutoff": {
+          "value": 10,
+          "evidence": {
+            "lineIds": [
+              "L9"
+            ],
+            "method": "exact_quote"
+          }
+        }
+      }
+    },
+    {
+      "id": "next-level-event",
+      "eventId": "next-level-november",
+      "url": "https://nextlevelcardshows.com/card-shows/santa-fe-station-november-2026/",
+      "status": "failed",
+      "extractionStatus": "evidence_validated_needs_review",
+      "reviewStatus": "unreviewed",
+      "elapsedMs": 25180,
+      "model": "qwen3.5:4b-q4_K_M",
+      "modelTiming": {
+        "totalDurationNs": 25176631500,
+        "evalCount": 1052
+      },
+      "inputTextSha256": "f6d6434633b1215ccab4f3bcb75c810ee8a447e810fbd400c3e4de9db9a6c07c",
+      "sourceLineCount": 8,
+      "fieldChecks": [
+        {
+          "name": "childInclusiveCutoff",
+          "status": "passed"
+        },
+        {
+          "name": "required session 1: saturday/general",
+          "status": "passed"
+        },
+        {
+          "name": "required session 2: sunday/general",
+          "status": "passed"
+        },
+        {
+          "name": "required session 3: saturday/vip",
+          "status": "passed"
+        },
+        {
+          "name": "required session 4: sunday/vip",
+          "status": "passed"
+        },
+        {
+          "name": "required ticket 1: general/weekend/undefined",
+          "status": "passed"
+        },
+        {
+          "name": "required ticket 2: vip/weekend/undefined",
+          "status": "passed"
+        },
+        {
+          "name": "session count",
+          "status": "passed"
+        },
+        {
+          "name": "admission count",
+          "status": "failed"
+        }
+      ],
+      "errors": [],
+      "evidenceChecks": [
+        {
+          "path": "eventName",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L1"
+          ]
+        },
+        {
+          "path": "venue",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L2"
+          ]
+        },
+        {
+          "path": "address",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L2"
+          ]
+        },
+        {
+          "path": "childInclusiveCutoff",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L7"
+          ]
+        },
+        {
+          "path": "sessions[0]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L4"
+          ]
+        },
+        {
+          "path": "sessions[1]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L5"
+          ]
+        },
+        {
+          "path": "sessions[2]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L4"
+          ]
+        },
+        {
+          "path": "sessions[3]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L5"
+          ]
+        },
+        {
+          "path": "admission[0]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L4"
+          ]
+        },
+        {
+          "path": "admission[1]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L5"
+          ]
+        },
+        {
+          "path": "admission[2]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L5"
+          ]
+        }
+      ],
+      "acceptedProposal": {
+        "eventName": {
+          "value": "Card Show at Santa Fe Station",
+          "evidence": {
+            "lineIds": [
+              "L1"
+            ],
+            "method": "exact_quote"
+          }
+        },
+        "venue": {
+          "value": "Santa Fe Station",
+          "evidence": {
+            "lineIds": [
+              "L2"
+            ],
+            "method": "exact_quote"
+          }
+        },
+        "address": {
+          "value": "4949 N Rancho Dr, Las Vegas, NV 89130",
+          "evidence": {
+            "lineIds": [
+              "L2"
+            ],
+            "method": "exact_quote"
+          }
+        },
+        "sessions": [
+          {
+            "date": "2026-11-21",
+            "day": "saturday",
+            "kind": "general",
+            "start": "10:00",
+            "end": "17:00",
+            "evidence": {
+              "lineIds": [
+                "L4"
+              ],
+              "method": "exact_quote"
+            }
+          },
+          {
+            "date": "2026-11-21",
+            "day": "saturday",
+            "kind": "vip",
+            "start": "09:00",
+            "end": "17:00",
+            "evidence": {
+              "lineIds": [
+                "L5"
+              ],
+              "method": "exact_quote"
+            }
+          },
+          {
+            "date": "2026-11-22",
+            "day": "sunday",
+            "kind": "general",
+            "start": "10:00",
+            "end": "17:00",
+            "evidence": {
+              "lineIds": [
+                "L4"
+              ],
+              "method": "exact_quote"
+            }
+          },
+          {
+            "date": "2026-11-22",
+            "day": "sunday",
+            "kind": "vip",
+            "start": "09:00",
+            "end": "17:00",
+            "evidence": {
+              "lineIds": [
+                "L5"
+              ],
+              "method": "exact_quote"
+            }
+          }
+        ],
+        "admission": [
+          {
+            "kind": "general",
+            "purchase": "door",
+            "scope": "weekend",
+            "adultFeeCents": 1000,
+            "serviceFeeCents": null,
+            "evidence": {
+              "lineIds": [
+                "L4"
+              ],
+              "method": "exact_quote"
+            }
+          },
+          {
+            "kind": "vip",
+            "purchase": "door",
+            "scope": "single_day",
+            "adultFeeCents": 2000,
+            "serviceFeeCents": null,
+            "evidence": {
+              "lineIds": [
+                "L5"
+              ],
+              "method": "exact_quote"
+            }
+          },
+          {
+            "kind": "vip",
+            "purchase": "door",
+            "scope": "weekend",
+            "adultFeeCents": 2000,
+            "serviceFeeCents": null,
+            "evidence": {
+              "lineIds": [
+                "L5"
+              ],
+              "method": "exact_quote"
+            }
+          }
+        ],
+        "childInclusiveCutoff": {
+          "value": 10,
+          "evidence": {
+            "lineIds": [
+              "L7"
+            ],
+            "method": "exact_quote"
+          }
+        }
+      }
+    },
+    {
+      "id": "next-level-tickets",
+      "eventId": "next-level-november",
+      "url": "https://www.strideevents.com/events/next-level-card-show/2026/tickets",
+      "status": "passed",
+      "extractionStatus": "evidence_validated_needs_review",
+      "reviewStatus": "unreviewed",
+      "elapsedMs": 13766,
+      "model": "qwen3.5:4b-q4_K_M",
+      "modelTiming": {
+        "totalDurationNs": 13763091700,
+        "evalCount": 568
+      },
+      "inputTextSha256": "ed644fde0054d109b761c457e0cee61ce9d3252da1867e506c63c650fa86dc58",
+      "sourceLineCount": 7,
+      "fieldChecks": [
+        {
+          "name": "childInclusiveCutoff",
+          "status": "passed"
+        },
+        {
+          "name": "required session 1: saturday/general",
+          "status": "passed"
+        },
+        {
+          "name": "required session 2: sunday/general",
+          "status": "passed"
+        },
+        {
+          "name": "admission count",
+          "status": "passed"
+        }
+      ],
+      "errors": [],
+      "evidenceChecks": [
+        {
+          "path": "eventName",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L1"
+          ]
+        },
+        {
+          "path": "venue",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L2"
+          ]
+        },
+        {
+          "path": "address",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L3"
+          ]
+        },
+        {
+          "path": "sessions[0]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L5"
+          ]
+        },
+        {
+          "path": "sessions[1]",
+          "ok": true,
+          "method": "exact_quote",
+          "lineIds": [
+            "L6"
+          ]
+        }
+      ],
+      "acceptedProposal": {
+        "eventName": {
+          "value": "Next Level Card Show",
+          "evidence": {
+            "lineIds": [
+              "L1"
+            ],
+            "method": "exact_quote"
+          }
+        },
+        "venue": {
+          "value": "Santa Fe Station Hotel & Casino",
+          "evidence": {
+            "lineIds": [
+              "L2"
+            ],
+            "method": "exact_quote"
+          }
+        },
+        "address": {
+          "value": "4949 N. Rancho Drive, Las Vegas",
+          "evidence": {
+            "lineIds": [
+              "L3"
+            ],
+            "method": "exact_quote"
+          }
+        },
+        "sessions": [
+          {
+            "date": "2026-11-21",
+            "day": "saturday",
+            "kind": "general",
+            "start": "10:00",
+            "end": "17:00",
+            "evidence": {
+              "lineIds": [
+                "L5"
+              ],
+              "method": "exact_quote"
+            }
+          },
+          {
+            "date": "2026-11-22",
+            "day": "sunday",
+            "kind": "general",
+            "start": "10:00",
+            "end": "16:00",
+            "evidence": {
+              "lineIds": [
+                "L6"
+              ],
+              "method": "exact_quote"
+            }
+          }
+        ],
+        "admission": [],
+        "childInclusiveCutoff": null
+      }
+    }
+  ],
+  "conflicts": [
+    {
+      "eventId": "next-level-november",
+      "field": "venue",
+      "observations": [
+        {
+          "sourceId": "next-level-event",
+          "value": "Santa Fe Station"
+        },
+        {
+          "sourceId": "next-level-tickets",
+          "value": "Santa Fe Station Hotel & Casino"
+        }
+      ],
+      "resolution": "unresolved_requires_curator_review"
+    },
+    {
+      "eventId": "next-level-november",
+      "field": "address",
+      "observations": [
+        {
+          "sourceId": "next-level-event",
+          "value": "4949 N Rancho Dr, Las Vegas, NV 89130"
+        },
+        {
+          "sourceId": "next-level-tickets",
+          "value": "4949 N. Rancho Drive, Las Vegas"
+        }
+      ],
+      "resolution": "unresolved_requires_curator_review"
+    },
+    {
+      "eventId": "next-level-november",
+      "field": "session.sunday.general.end",
+      "observations": [
+        {
+          "sourceId": "next-level-event",
+          "value": "17:00"
+        },
+        {
+          "sourceId": "next-level-tickets",
+          "value": "16:00"
+        }
+      ],
+      "resolution": "unresolved_requires_curator_review"
+    }
+  ],
+  "boundaryChecks": [
+    {
+      "name": "remote model endpoints rejected",
+      "status": "passed"
+    },
+    {
+      "name": "noncanonical numeric loopback spellings rejected",
+      "status": "passed"
+    },
+    {
+      "name": "model endpoint credentials and paths rejected",
+      "status": "passed"
+    },
+    {
+      "name": "missing evidence rejected",
+      "status": "passed"
+    },
+    {
+      "name": "missing source lines rejected",
+      "status": "passed"
+    },
+    {
+      "name": "exact source quote accepted",
+      "status": "passed"
+    },
+    {
+      "name": "repeated exact quotation matched to its later source line",
+      "status": "passed"
+    },
+    {
+      "name": "non-exact quotation discarded with valid line fallback",
+      "status": "passed"
+    },
+    {
+      "name": "quotation and line mismatch rejected",
+      "status": "passed"
+    },
+    {
+      "name": "duplicate source IDs rejected",
+      "status": "passed"
+    },
+    {
+      "name": "numeric source IDs rejected",
+      "status": "passed"
+    },
+    {
+      "name": "unknown model fields rejected",
+      "status": "passed"
+    }
+  ],
+  "conflictChecks": [
+    {
+      "eventId": "next-level-november",
+      "field": "session.sunday.general.end",
+      "values": [
+        "17:00",
+        "16:00"
+      ],
+      "status": "passed"
+    }
+  ],
+  "summary": {
+    "sources": 4,
+    "passed": 1,
+    "failed": 3,
+    "sourceConflicts": 3,
+    "lineIdFallbackFacts": 0,
+    "evidenceValidated": 3,
+    "recheckInvokedModel": false
+  },
+  "limitations": [
+    "This is one local run on short selected organizer excerpts, not a representative accuracy benchmark.",
+    "Schema and exact evidence checks do not prove factual interpretation or completeness; curator review is required.",
+    "The public receipt retains normalized proposed facts and validated line IDs; private source excerpts are not redistributed.",
+    "Conflicting sources remain unresolved. No live monitoring, cancellation guarantee or consumer demand was tested."
+  ],
+  "previousRuns": [
+    {
+      "pipelineVersion": "1",
+      "model": "qwen3.5:4b-q4_K_M",
+      "runAt": "2026-10-13T02:43:07.424Z",
+      "ollamaVersion": "0.35.0",
+      "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "sizeBytes": 3324173934,
+      "modifiedAt": "2026-10-09T16:17:04.2171258-07:00",
+      "localEndpoint": "http://127.0.0.1:11434",
+      "settings": {
+        "think": false,
+        "temperature": 0,
+        "seed": 24,
+        "schemaConstrained": true
+      },
+      "license": {
+        "name": "Apache-2.0",
+        "modelCard": "https://huggingface.co/Qwen/Qwen3.5-4B",
+        "checkedAt": "2026-10-13"
+      },
+      "elapsedMs": 166446,
+      "cases": [
+        {
+          "id": "front-row-event",
+          "eventId": "front-row-october",
+          "url": "https://frontrowcardshow.com/collections/las-vegas",
+          "status": "failed",
+          "extractionStatus": "evidence_validated_needs_review",
+          "reviewStatus": "unreviewed",
+          "elapsedMs": 31468,
+          "model": "qwen3.5:4b-q4_K_M",
+          "modelTiming": {
+            "totalDurationNs": 31462003000,
+            "evalCount": 1174
+          },
+          "inputTextSha256": "053f65a42598ab50d4131edeb9de7225848e2918d564afc6a4c6b3d46b0ac1f6",
+          "sourceLineCount": 11,
+          "fieldChecks": [
+            {
+              "name": "venue",
+              "status": "passed"
+            },
+            {
+              "name": "address",
+              "status": "passed"
+            },
+            {
+              "name": "childInclusiveCutoff",
+              "status": "passed"
+            },
+            {
+              "name": "required session 1: saturday/general",
+              "status": "failed"
+            },
+            {
+              "name": "required session 2: saturday/vip",
+              "status": "failed"
+            },
+            {
+              "name": "required session 3: saturday/trade",
+              "status": "passed"
+            },
+            {
+              "name": "required session 4: sunday/general",
+              "status": "failed"
+            },
+            {
+              "name": "required session 5: sunday/vip",
+              "status": "failed"
+            },
+            {
+              "name": "required ticket 1: general/undefined/advance",
+              "status": "passed"
+            },
+            {
+              "name": "required ticket 2: general/undefined/door",
+              "status": "passed"
+            },
+            {
+              "name": "required ticket 3: vip/single_day/advance",
+              "status": "failed"
+            },
+            {
+              "name": "required ticket 4: vip/weekend/advance",
+              "status": "failed"
+            },
+            {
+              "name": "required ticket 5: vip/single_day/door",
+              "status": "failed"
+            },
+            {
+              "name": "required ticket 6: vip/weekend/door",
+              "status": "failed"
+            },
+            {
+              "name": "session count",
+              "status": "failed"
+            },
+            {
+              "name": "admission count",
+              "status": "failed"
+            }
+          ],
+          "errors": [],
+          "evidenceChecks": [
+            {
+              "path": "venue",
+              "ok": true,
+              "method": "line_ids",
+              "lineIds": [
+                "L2"
+              ],
+              "warning": "Source lines require factual review."
+            },
+            {
+              "path": "address",
+              "ok": true,
+              "method": "line_ids",
+              "lineIds": [
+                "L3"
+              ],
+              "warning": "Source lines require factual review."
+            },
+            {
+              "path": "childInclusiveCutoff",
+              "ok": true,
+              "method": "line_ids",
+              "lineIds": [
+                "L11"
+              ],
+              "warning": "Source lines require factual review."
+            },
+            {
+              "path": "sessions[0]",
+              "ok": true,
+              "method": "line_ids",
+              "lineIds": [
+                "L5"
+              ],
+              "warning": "Source lines require factual review."
+            },
+            {
+              "path": "sessions[1]",
+              "ok": true,
+              "method": "line_ids",
+              "lineIds": [
+                "L6"
+              ],
+              "warning": "Source lines require factual review."
+            },
+            {
+              "path": "sessions[2]",
+              "ok": true,
+              "method": "line_ids",
+              "lineIds": [
+                "L8"
+              ],
+              "warning": "Source lines require factual review."
+            },
+            {
+              "path": "sessions[3]",
+              "ok": true,
+              "method": "line_ids",
+              "lineIds": [
+                "L6"
+              ],
+              "warning": "Source lines require factual review."
+            },
+            {
+              "path": "admission[0]",
+              "ok": true,
+              "method": "line_ids",
+              "lineIds": [
+                "L9"
+              ],
+              "warning": "Source lines require factual review."
+            },
+            {
+              "path": "admission[1]",
+              "ok": true,
+              "method": "line_ids",
+              "lineIds": [
+                "L9"
+              ],
+              "warning": "Source lines require factual review."
+            },
+            {
+              "path": "admission[2]",
+              "ok": true,
+              "method": "line_ids",
+              "lineIds": [
+                "L10"
+              ],
+              "warning": "Source lines require factual review."
+            },
+            {
+              "path": "admission[3]",
+              "ok": true,
+              "method": "line_ids",
+              "lineIds": [
+                "L10"
+              ],
+              "warning": "Source lines require factual review."
+            },
+            {
+              "path": "admission[4]",
+              "ok": true,
+              "method": "line_ids",
+              "lineIds": [
+                "L10"
+              ],
+              "warning": "Source lines require factual review."
+            },
+            {
+              "path": "admission[5]",
+              "ok": true,
+              "method": "line_ids",
+              "lineIds": [
+                "L10"
+              ],
+              "warning": "Source lines require factual review."
+            },
+            {
+              "path": "admission[6]",
+              "ok": true,
+              "method": "line_ids",
+              "lineIds": [
+                "L11"
+              ],
+              "warning": "Source lines require factual review."
+            },
+            {
+              "path": "admission[7]",
+              "ok": true,
+              "method": "line_ids",
+              "lineIds": [
+                "L11"
+              ],
+              "warning": "Source lines require factual review."
+            }
+          ],
+          "acceptedProposal": {
+            "eventName": null,
+            "venue": {
+              "value": "RIO HOTEL & CASINO",
+              "evidence": {
+                "lineIds": [
+                  "L2"
+                ],
+                "method": "line_ids"
+              }
+            },
+            "address": {
+              "value": "3700 W. Flamingo Road, Las Vegas, NV 89103",
+              "evidence": {
+                "lineIds": [
+                  "L3"
+                ],
+                "method": "line_ids"
+              }
+            },
+            "sessions": [
+              {
+                "date": null,
+                "day": "saturday",
+                "kind": "general",
+                "start": "10:00",
+                "end": "17:00",
+                "evidence": {
+                  "lineIds": [
+                    "L5"
+                  ],
+                  "method": "line_ids"
+                }
+              },
+              {
+                "date": null,
+                "day": "saturday",
+                "kind": "trade",
+                "start": "17:00",
+                "end": "21:00",
+                "evidence": {
+                  "lineIds": [
+                    "L6"
+                  ],
+                  "method": "line_ids"
+                }
+              },
+              {
+                "date": null,
+                "day": "sunday",
+                "kind": "general",
+                "start": "10:00",
+                "end": "17:00",
+                "evidence": {
+                  "lineIds": [
+                    "L8"
+                  ],
+                  "method": "line_ids"
+                }
+              },
+              {
+                "date": null,
+                "day": "sunday",
+                "kind": "trade",
+                "start": "17:00",
+                "end": "21:00",
+                "evidence": {
+                  "lineIds": [
+                    "L6"
+                  ],
+                  "method": "line_ids"
+                }
+              }
+            ],
+            "admission": [
+              {
+                "kind": "general",
+                "scope": "unknown",
+                "purchase": "advance",
+                "adultFeeCents": 1000,
+                "serviceFeeCents": null,
+                "evidence": {
+                  "lineIds": [
+                    "L9"
+                  ],
+                  "method": "line_ids"
+                }
+              },
+              {
+                "kind": "general",
+                "scope": "unknown",
+                "purchase": "door",
+                "adultFeeCents": 1500,
+                "serviceFeeCents": null,
+                "evidence": {
+                  "lineIds": [
+                    "L9"
+                  ],
+                  "method": "line_ids"
+                }
+              },
+              {
+                "kind": "vip",
+                "scope": "unknown",
+                "purchase": "advance",
+                "adultFeeCents": 2000,
+                "serviceFeeCents": null,
+                "evidence": {
+                  "lineIds": [
+                    "L10"
+                  ],
+                  "method": "line_ids"
+                }
+              },
+              {
+                "kind": "vip",
+                "scope": "unknown",
+                "purchase": "door",
+                "adultFeeCents": 2500,
+                "serviceFeeCents": null,
+                "evidence": {
+                  "lineIds": [
+                    "L10"
+                  ],
+                  "method": "line_ids"
+                }
+              },
+              {
+                "kind": "vip",
+                "scope": "unknown",
+                "purchase": "advance",
+                "adultFeeCents": 2500,
+                "serviceFeeCents": null,
+                "evidence": {
+                  "lineIds": [
+                    "L10"
+                  ],
+                  "method": "line_ids"
+                }
+              },
+              {
+                "kind": "vip",
+                "scope": "unknown",
+                "purchase": "door",
+                "adultFeeCents": 3000,
+                "serviceFeeCents": null,
+                "evidence": {
+                  "lineIds": [
+                    "L10"
+                  ],
+                  "method": "line_ids"
+                }
+              },
+              {
+                "kind": "general",
+                "scope": "unknown",
+                "purchase": "advance",
+                "adultFeeCents": 0,
+                "serviceFeeCents": null,
+                "evidence": {
+                  "lineIds": [
+                    "L11"
+                  ],
+                  "method": "line_ids"
+                }
+              },
+              {
+                "kind": "general",
+                "scope": "unknown",
+                "purchase": "door",
+                "adultFeeCents": 0,
+                "serviceFeeCents": null,
+                "evidence": {
+                  "lineIds": [
+                    "L11"
+                  ],
+                  "method": "line_ids"
+                }
+              }
+            ],
+            "childInclusiveCutoff": {
+              "value": 10,
+              "evidence": {
+                "lineIds": [
+                  "L11"
+                ],
+                "method": "line_ids"
+              }
+            }
+          }
+        },
+        {
+          "id": "front-row-tickets",
+          "eventId": "front-row-october",
+          "url": "https://events.leapevents.com/event/front-row-card-show-las-vegas-2026-october-24-25",
+          "status": "failed",
+          "extractionStatus": "rejected",
+          "reviewStatus": "unreviewed",
+          "elapsedMs": 77995,
+          "model": "qwen3.5:4b-q4_K_M",
+          "modelTiming": {
+            "totalDurationNs": 77981312900,
+            "evalCount": 3344
+          },
+          "inputTextSha256": "bf8282cff961da9b7e55b703e23e63ee46e664389b42018836f6a35b0e79bf0c",
+          "sourceLineCount": 12,
+          "fieldChecks": [
+            {
+              "name": "accepted proposal available",
+              "status": "failed"
+            }
+          ],
+          "errors": [
+            "sessions[7]: Evidence line IDs do not match the exact quotation.",
+            "sessions: duplicate session",
+            "sessions: duplicate session",
+            "sessions: duplicate session"
+          ],
+          "evidenceChecks": [
+            {
+              "path": "eventName",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L1"
+              ]
+            },
+            {
+              "path": "venue",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L2"
+              ]
+            },
+            {
+              "path": "address",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L3"
+              ]
+            },
+            {
+              "path": "childInclusiveCutoff",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L9"
+              ]
+            },
+            {
+              "path": "sessions[0]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L4"
+              ]
+            },
+            {
+              "path": "sessions[1]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L5"
+              ]
+            },
+            {
+              "path": "sessions[2]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L6"
+              ]
+            },
+            {
+              "path": "sessions[3]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L10"
+              ]
+            },
+            {
+              "path": "sessions[4]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L11"
+              ]
+            },
+            {
+              "path": "sessions[5]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L12"
+              ]
+            },
+            {
+              "path": "sessions[6]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L7"
+              ]
+            },
+            {
+              "path": "sessions[7]",
+              "ok": false,
+              "reason": "Evidence line IDs do not match the exact quotation."
+            },
+            {
+              "path": "sessions[8]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L9"
+              ]
+            },
+            {
+              "path": "admission[0]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L10"
+              ]
+            },
+            {
+              "path": "admission[1]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L11"
+              ]
+            },
+            {
+              "path": "admission[2]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L12"
+              ]
+            },
+            {
+              "path": "admission[3]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L10"
+              ]
+            },
+            {
+              "path": "admission[4]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L12"
+              ]
+            },
+            {
+              "path": "admission[5]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L10"
+              ]
+            },
+            {
+              "path": "admission[6]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L12"
+              ]
+            },
+            {
+              "path": "admission[7]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L10"
+              ]
+            },
+            {
+              "path": "admission[8]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L12"
+              ]
+            },
+            {
+              "path": "admission[9]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L10"
+              ]
+            },
+            {
+              "path": "admission[10]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L12"
+              ]
+            },
+            {
+              "path": "admission[11]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L10"
+              ]
+            },
+            {
+              "path": "admission[12]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L12"
+              ]
+            },
+            {
+              "path": "admission[13]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L10"
+              ]
+            },
+            {
+              "path": "admission[14]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L12"
+              ]
+            },
+            {
+              "path": "admission[15]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L10"
+              ]
+            }
+          ],
+          "acceptedProposal": null
+        },
+        {
+          "id": "next-level-event",
+          "eventId": "next-level-november",
+          "url": "https://nextlevelcardshows.com/card-shows/santa-fe-station-november-2026/",
+          "status": "failed",
+          "extractionStatus": "rejected",
+          "reviewStatus": "unreviewed",
+          "elapsedMs": 43727,
+          "model": "qwen3.5:4b-q4_K_M",
+          "modelTiming": {
+            "totalDurationNs": 43723157700,
+            "evalCount": 1865
+          },
+          "inputTextSha256": "f6d6434633b1215ccab4f3bcb75c810ee8a447e810fbd400c3e4de9db9a6c07c",
+          "sourceLineCount": 8,
+          "fieldChecks": [
+            {
+              "name": "accepted proposal available",
+              "status": "failed"
+            }
+          ],
+          "errors": [
+            "sessions: duplicate session",
+            "sessions: duplicate session",
+            "sessions: duplicate session",
+            "sessions: duplicate session",
+            "sessions: duplicate session",
+            "sessions: duplicate session",
+            "sessions: duplicate session",
+            "sessions: duplicate session"
+          ],
+          "evidenceChecks": [
+            {
+              "path": "eventName",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L1"
+              ]
+            },
+            {
+              "path": "venue",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L2"
+              ]
+            },
+            {
+              "path": "address",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L2"
+              ]
+            },
+            {
+              "path": "childInclusiveCutoff",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L7"
+              ]
+            },
+            {
+              "path": "sessions[0]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L4"
+              ]
+            },
+            {
+              "path": "sessions[1]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L4"
+              ]
+            },
+            {
+              "path": "sessions[2]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L5"
+              ]
+            },
+            {
+              "path": "sessions[3]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L5"
+              ]
+            },
+            {
+              "path": "sessions[4]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L3"
+              ]
+            },
+            {
+              "path": "sessions[5]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L3"
+              ]
+            },
+            {
+              "path": "sessions[6]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L6"
+              ]
+            },
+            {
+              "path": "sessions[7]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L6"
+              ]
+            },
+            {
+              "path": "sessions[8]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L7"
+              ]
+            },
+            {
+              "path": "sessions[9]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L7"
+              ]
+            },
+            {
+              "path": "sessions[10]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L8"
+              ]
+            },
+            {
+              "path": "sessions[11]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L8"
+              ]
+            },
+            {
+              "path": "admission[0]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L4"
+              ]
+            },
+            {
+              "path": "admission[1]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L5"
+              ]
+            },
+            {
+              "path": "admission[2]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L8"
+              ]
+            },
+            {
+              "path": "admission[3]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L7"
+              ]
+            }
+          ],
+          "acceptedProposal": null
+        },
+        {
+          "id": "next-level-tickets",
+          "eventId": "next-level-november",
+          "url": "https://www.strideevents.com/events/next-level-card-show/2026/tickets",
+          "status": "passed",
+          "extractionStatus": "evidence_validated_needs_review",
+          "reviewStatus": "unreviewed",
+          "elapsedMs": 13255,
+          "model": "qwen3.5:4b-q4_K_M",
+          "modelTiming": {
+            "totalDurationNs": 13252170500,
+            "evalCount": 562
+          },
+          "inputTextSha256": "ed644fde0054d109b761c457e0cee61ce9d3252da1867e506c63c650fa86dc58",
+          "sourceLineCount": 7,
+          "fieldChecks": [
+            {
+              "name": "childInclusiveCutoff",
+              "status": "passed"
+            },
+            {
+              "name": "required session 1: saturday/general",
+              "status": "passed"
+            },
+            {
+              "name": "required session 2: sunday/general",
+              "status": "passed"
+            },
+            {
+              "name": "admission count",
+              "status": "passed"
+            }
+          ],
+          "errors": [],
+          "evidenceChecks": [
+            {
+              "path": "eventName",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L1"
+              ]
+            },
+            {
+              "path": "venue",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L2"
+              ]
+            },
+            {
+              "path": "address",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L3"
+              ]
+            },
+            {
+              "path": "sessions[0]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L4",
+                "L5"
+              ]
+            },
+            {
+              "path": "sessions[1]",
+              "ok": true,
+              "method": "line_ids",
+              "lineIds": [
+                "L4",
+                "L6"
+              ],
+              "warning": "Non-exact quotation discarded; source lines require factual review."
+            },
+            {
+              "path": "sessions[2]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L7"
+              ]
+            }
+          ],
+          "acceptedProposal": {
+            "eventName": {
+              "value": "Next Level Card Show - 2026 Tickets",
+              "evidence": {
+                "lineIds": [
+                  "L1"
+                ],
+                "method": "exact_quote"
+              }
+            },
+            "venue": {
+              "value": "Santa Fe Station Hotel & Casino",
+              "evidence": {
+                "lineIds": [
+                  "L2"
+                ],
+                "method": "exact_quote"
+              }
+            },
+            "address": {
+              "value": "4949 N. Rancho Drive, Las Vegas",
+              "evidence": {
+                "lineIds": [
+                  "L3"
+                ],
+                "method": "exact_quote"
+              }
+            },
+            "sessions": [
+              {
+                "date": "2026-11-21",
+                "day": "saturday",
+                "kind": "general",
+                "start": "10:00",
+                "end": "17:00",
+                "evidence": {
+                  "lineIds": [
+                    "L4",
+                    "L5"
+                  ],
+                  "method": "exact_quote"
+                }
+              },
+              {
+                "date": "2026-11-22",
+                "day": "sunday",
+                "kind": "general",
+                "start": "10:00",
+                "end": "16:00",
+                "evidence": {
+                  "lineIds": [
+                    "L4",
+                    "L6"
+                  ],
+                  "method": "line_ids"
+                }
+              },
+              {
+                "date": "2026-11-21",
+                "day": "saturday",
+                "kind": "vip",
+                "start": "09:00",
+                "end": null,
+                "evidence": {
+                  "lineIds": [
+                    "L7"
+                  ],
+                  "method": "exact_quote"
+                }
+              }
+            ],
+            "admission": [],
+            "childInclusiveCutoff": null
+          }
+        }
+      ],
+      "conflicts": [],
+      "boundaryChecks": [
+        {
+          "name": "remote model endpoints rejected",
+          "status": "passed"
+        },
+        {
+          "name": "model endpoint credentials and paths rejected",
+          "status": "passed"
+        },
+        {
+          "name": "missing evidence rejected",
+          "status": "passed"
+        },
+        {
+          "name": "missing source lines rejected",
+          "status": "passed"
+        },
+        {
+          "name": "exact source quote accepted",
+          "status": "passed"
+        },
+        {
+          "name": "non-exact quotation discarded with valid line fallback",
+          "status": "passed"
+        },
+        {
+          "name": "quotation and line mismatch rejected",
+          "status": "passed"
+        },
+        {
+          "name": "duplicate source IDs rejected",
+          "status": "passed"
+        },
+        {
+          "name": "unknown model fields rejected",
+          "status": "passed"
+        },
+        {
+          "name": "non-JSON model boundaries rejected",
+          "status": "passed"
+        }
+      ],
+      "conflictChecks": [
+        {
+          "eventId": "next-level-november",
+          "field": "session.sunday.general.end",
+          "values": [
+            "17:00",
+            "16:00"
+          ],
+          "status": "failed"
+        }
+      ],
+      "summary": {
+        "sources": 4,
+        "passed": 1,
+        "failed": 3,
+        "sourceConflicts": 0,
+        "lineIdFallbackFacts": 16
+      },
+      "limitations": [
+        "This is one local run on short selected organizer excerpts, not a representative accuracy benchmark.",
+        "Schema and exact evidence checks do not prove factual interpretation or completeness; curator review is required.",
+        "The public receipt retains normalized proposed facts and validated line IDs; private source excerpts are not redistributed.",
+        "Conflicting sources remain unresolved. No live monitoring, cancellation guarantee or consumer demand was tested."
+      ]
+    },
+    {
+      "pipelineVersion": "2",
+      "model": "qwen3.5:4b-q4_K_M",
+      "runAt": "2026-10-13T02:46:47.098Z",
+      "ollamaVersion": "0.35.0",
+      "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "sizeBytes": 3324173934,
+      "modifiedAt": "2026-10-09T16:17:04.2171258-07:00",
+      "localEndpoint": "http://127.0.0.1:11434",
+      "settings": {
+        "think": false,
+        "temperature": 0,
+        "seed": 24,
+        "schemaConstrained": true
+      },
+      "license": {
+        "name": "Apache-2.0",
+        "modelCard": "https://huggingface.co/Qwen/Qwen3.5-4B",
+        "checkedAt": "2026-10-13"
+      },
+      "elapsedMs": 95090,
+      "cases": [
+        {
+          "id": "front-row-event",
+          "eventId": "front-row-october",
+          "url": "https://frontrowcardshow.com/collections/las-vegas",
+          "status": "failed",
+          "extractionStatus": "rejected",
+          "reviewStatus": "unreviewed",
+          "elapsedMs": 30558,
+          "model": "qwen3.5:4b-q4_K_M",
+          "modelTiming": {
+            "totalDurationNs": 30532172200,
+            "evalCount": 1223
+          },
+          "inputTextSha256": "053f65a42598ab50d4131edeb9de7225848e2918d564afc6a4c6b3d46b0ac1f6",
+          "sourceLineCount": 11,
+          "fieldChecks": [
+            {
+              "name": "accepted proposal available",
+              "status": "failed"
+            }
+          ],
+          "errors": [
+            "sessions: date and weekday disagree",
+            "sessions: date and weekday disagree",
+            "sessions: date and weekday disagree",
+            "sessions: date and weekday disagree",
+            "sessions: date and weekday disagree",
+            "sessions: date and weekday disagree"
+          ],
+          "evidenceChecks": [
+            {
+              "path": "eventName",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L1"
+              ]
+            },
+            {
+              "path": "venue",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L2"
+              ]
+            },
+            {
+              "path": "address",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L3"
+              ]
+            },
+            {
+              "path": "childInclusiveCutoff",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L11"
+              ]
+            },
+            {
+              "path": "sessions[0]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L4",
+                "L5"
+              ]
+            },
+            {
+              "path": "sessions[1]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L4",
+                "L5"
+              ]
+            },
+            {
+              "path": "sessions[2]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L6"
+              ]
+            },
+            {
+              "path": "sessions[3]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L7",
+                "L8"
+              ]
+            },
+            {
+              "path": "sessions[4]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L7",
+                "L8"
+              ]
+            },
+            {
+              "path": "sessions[5]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L7",
+                "L8"
+              ]
+            },
+            {
+              "path": "admission[0]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L9"
+              ]
+            },
+            {
+              "path": "admission[1]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L9"
+              ]
+            },
+            {
+              "path": "admission[2]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L10"
+              ]
+            },
+            {
+              "path": "admission[3]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L10"
+              ]
+            },
+            {
+              "path": "admission[4]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L10"
+              ]
+            },
+            {
+              "path": "admission[5]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L10"
+              ]
+            }
+          ],
+          "acceptedProposal": null
+        },
+        {
+          "id": "front-row-tickets",
+          "eventId": "front-row-october",
+          "url": "https://events.leapevents.com/event/front-row-card-show-las-vegas-2026-october-24-25",
+          "status": "failed",
+          "extractionStatus": "rejected",
+          "reviewStatus": "unreviewed",
+          "elapsedMs": 30494,
+          "model": "qwen3.5:4b-q4_K_M",
+          "modelTiming": {
+            "totalDurationNs": 30490223100,
+            "evalCount": 1310
+          },
+          "inputTextSha256": "bf8282cff961da9b7e55b703e23e63ee46e664389b42018836f6a35b0e79bf0c",
+          "sourceLineCount": 12,
+          "fieldChecks": [
+            {
+              "name": "accepted proposal available",
+              "status": "failed"
+            }
+          ],
+          "errors": [
+            "sessions[3]: Evidence line IDs do not match the exact quotation.",
+            "sessions[4]: Evidence line IDs do not match the exact quotation."
+          ],
+          "evidenceChecks": [
+            {
+              "path": "eventName",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L1"
+              ]
+            },
+            {
+              "path": "venue",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L2"
+              ]
+            },
+            {
+              "path": "address",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L3"
+              ]
+            },
+            {
+              "path": "childInclusiveCutoff",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L9"
+              ]
+            },
+            {
+              "path": "sessions[0]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L5"
+              ]
+            },
+            {
+              "path": "sessions[1]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L5"
+              ]
+            },
+            {
+              "path": "sessions[2]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L6"
+              ]
+            },
+            {
+              "path": "sessions[3]",
+              "ok": false,
+              "reason": "Evidence line IDs do not match the exact quotation."
+            },
+            {
+              "path": "sessions[4]",
+              "ok": false,
+              "reason": "Evidence line IDs do not match the exact quotation."
+            },
+            {
+              "path": "admission[0]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L10"
+              ]
+            },
+            {
+              "path": "admission[1]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L11"
+              ]
+            },
+            {
+              "path": "admission[2]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L12"
+              ]
+            }
+          ],
+          "acceptedProposal": null
+        },
+        {
+          "id": "next-level-event",
+          "eventId": "next-level-november",
+          "url": "https://nextlevelcardshows.com/card-shows/santa-fe-station-november-2026/",
+          "status": "failed",
+          "extractionStatus": "evidence_validated_needs_review",
+          "reviewStatus": "unreviewed",
+          "elapsedMs": 21758,
+          "model": "qwen3.5:4b-q4_K_M",
+          "modelTiming": {
+            "totalDurationNs": 21754474300,
+            "evalCount": 937
+          },
+          "inputTextSha256": "f6d6434633b1215ccab4f3bcb75c810ee8a447e810fbd400c3e4de9db9a6c07c",
+          "sourceLineCount": 8,
+          "fieldChecks": [
+            {
+              "name": "childInclusiveCutoff",
+              "status": "passed"
+            },
+            {
+              "name": "required session 1: saturday/general",
+              "status": "passed"
+            },
+            {
+              "name": "required session 2: sunday/general",
+              "status": "passed"
+            },
+            {
+              "name": "required session 3: saturday/vip",
+              "status": "failed"
+            },
+            {
+              "name": "required session 4: sunday/vip",
+              "status": "failed"
+            },
+            {
+              "name": "required ticket 1: general/weekend/undefined",
+              "status": "passed"
+            },
+            {
+              "name": "required ticket 2: vip/weekend/undefined",
+              "status": "passed"
+            },
+            {
+              "name": "session count",
+              "status": "passed"
+            },
+            {
+              "name": "admission count",
+              "status": "passed"
+            }
+          ],
+          "errors": [],
+          "evidenceChecks": [
+            {
+              "path": "eventName",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L1"
+              ]
+            },
+            {
+              "path": "venue",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L2"
+              ]
+            },
+            {
+              "path": "address",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L2"
+              ]
+            },
+            {
+              "path": "childInclusiveCutoff",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L7"
+              ]
+            },
+            {
+              "path": "sessions[0]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L4"
+              ]
+            },
+            {
+              "path": "sessions[1]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L5"
+              ]
+            },
+            {
+              "path": "sessions[2]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L4"
+              ]
+            },
+            {
+              "path": "sessions[3]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L5"
+              ]
+            },
+            {
+              "path": "admission[0]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L4"
+              ]
+            },
+            {
+              "path": "admission[1]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L5"
+              ]
+            }
+          ],
+          "acceptedProposal": {
+            "eventName": {
+              "value": "Card Show",
+              "evidence": {
+                "lineIds": [
+                  "L1"
+                ],
+                "method": "exact_quote"
+              }
+            },
+            "venue": {
+              "value": "Santa Fe Station",
+              "evidence": {
+                "lineIds": [
+                  "L2"
+                ],
+                "method": "exact_quote"
+              }
+            },
+            "address": {
+              "value": "4949 N Rancho Dr, Las Vegas, NV 89130",
+              "evidence": {
+                "lineIds": [
+                  "L2"
+                ],
+                "method": "exact_quote"
+              }
+            },
+            "sessions": [
+              {
+                "date": "2026-11-21",
+                "day": "saturday",
+                "kind": "general",
+                "start": "10:00",
+                "end": "17:00",
+                "evidence": {
+                  "lineIds": [
+                    "L4"
+                  ],
+                  "method": "exact_quote"
+                }
+              },
+              {
+                "date": "2026-11-21",
+                "day": "saturday",
+                "kind": "vip",
+                "start": "09:00",
+                "end": null,
+                "evidence": {
+                  "lineIds": [
+                    "L5"
+                  ],
+                  "method": "exact_quote"
+                }
+              },
+              {
+                "date": "2026-11-22",
+                "day": "sunday",
+                "kind": "general",
+                "start": "10:00",
+                "end": "17:00",
+                "evidence": {
+                  "lineIds": [
+                    "L4"
+                  ],
+                  "method": "exact_quote"
+                }
+              },
+              {
+                "date": "2026-11-22",
+                "day": "sunday",
+                "kind": "vip",
+                "start": "09:00",
+                "end": null,
+                "evidence": {
+                  "lineIds": [
+                    "L5"
+                  ],
+                  "method": "exact_quote"
+                }
+              }
+            ],
+            "admission": [
+              {
+                "kind": "general",
+                "scope": "weekend",
+                "purchase": "unspecified",
+                "adultFeeCents": 1000,
+                "serviceFeeCents": null,
+                "evidence": {
+                  "lineIds": [
+                    "L4"
+                  ],
+                  "method": "exact_quote"
+                }
+              },
+              {
+                "kind": "vip",
+                "scope": "weekend",
+                "purchase": "unspecified",
+                "adultFeeCents": 2000,
+                "serviceFeeCents": null,
+                "evidence": {
+                  "lineIds": [
+                    "L5"
+                  ],
+                  "method": "exact_quote"
+                }
+              }
+            ],
+            "childInclusiveCutoff": {
+              "value": 10,
+              "evidence": {
+                "lineIds": [
+                  "L7"
+                ],
+                "method": "exact_quote"
+              }
+            }
+          }
+        },
+        {
+          "id": "next-level-tickets",
+          "eventId": "next-level-november",
+          "url": "https://www.strideevents.com/events/next-level-card-show/2026/tickets",
+          "status": "failed",
+          "extractionStatus": "evidence_validated_needs_review",
+          "reviewStatus": "unreviewed",
+          "elapsedMs": 12279,
+          "model": "qwen3.5:4b-q4_K_M",
+          "modelTiming": {
+            "totalDurationNs": 12275220100,
+            "evalCount": 527
+          },
+          "inputTextSha256": "ed644fde0054d109b761c457e0cee61ce9d3252da1867e506c63c650fa86dc58",
+          "sourceLineCount": 7,
+          "fieldChecks": [
+            {
+              "name": "childInclusiveCutoff",
+              "status": "passed"
+            },
+            {
+              "name": "required session 1: saturday/general",
+              "status": "failed"
+            },
+            {
+              "name": "required session 2: sunday/general",
+              "status": "failed"
+            },
+            {
+              "name": "admission count",
+              "status": "passed"
+            }
+          ],
+          "errors": [],
+          "evidenceChecks": [
+            {
+              "path": "eventName",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L1"
+              ]
+            },
+            {
+              "path": "venue",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L2"
+              ]
+            },
+            {
+              "path": "address",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L3"
+              ]
+            },
+            {
+              "path": "sessions[0]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L5"
+              ]
+            },
+            {
+              "path": "sessions[1]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L6"
+              ]
+            },
+            {
+              "path": "sessions[2]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L7"
+              ]
+            }
+          ],
+          "acceptedProposal": {
+            "eventName": {
+              "value": "Next Level Card Show",
+              "evidence": {
+                "lineIds": [
+                  "L1"
+                ],
+                "method": "exact_quote"
+              }
+            },
+            "venue": {
+              "value": "Santa Fe Station Hotel & Casino",
+              "evidence": {
+                "lineIds": [
+                  "L2"
+                ],
+                "method": "exact_quote"
+              }
+            },
+            "address": {
+              "value": "4949 N. Rancho Drive, Las Vegas",
+              "evidence": {
+                "lineIds": [
+                  "L3"
+                ],
+                "method": "exact_quote"
+              }
+            },
+            "sessions": [
+              {
+                "date": null,
+                "day": "saturday",
+                "kind": "general",
+                "start": "10:00",
+                "end": "17:00",
+                "evidence": {
+                  "lineIds": [
+                    "L5"
+                  ],
+                  "method": "exact_quote"
+                }
+              },
+              {
+                "date": null,
+                "day": "sunday",
+                "kind": "general",
+                "start": "10:00",
+                "end": "16:00",
+                "evidence": {
+                  "lineIds": [
+                    "L6"
+                  ],
+                  "method": "exact_quote"
+                }
+              },
+              {
+                "date": null,
+                "day": "saturday",
+                "kind": "vip",
+                "start": "09:00",
+                "end": null,
+                "evidence": {
+                  "lineIds": [
+                    "L7"
+                  ],
+                  "method": "exact_quote"
+                }
+              }
+            ],
+            "admission": [],
+            "childInclusiveCutoff": null
+          }
+        }
+      ],
+      "conflicts": [
+        {
+          "eventId": "next-level-november",
+          "field": "venue",
+          "observations": [
+            {
+              "sourceId": "next-level-event",
+              "value": "Santa Fe Station"
+            },
+            {
+              "sourceId": "next-level-tickets",
+              "value": "Santa Fe Station Hotel & Casino"
+            }
+          ],
+          "resolution": "unresolved_requires_curator_review"
+        },
+        {
+          "eventId": "next-level-november",
+          "field": "address",
+          "observations": [
+            {
+              "sourceId": "next-level-event",
+              "value": "4949 N Rancho Dr, Las Vegas, NV 89130"
+            },
+            {
+              "sourceId": "next-level-tickets",
+              "value": "4949 N. Rancho Drive, Las Vegas"
+            }
+          ],
+          "resolution": "unresolved_requires_curator_review"
+        },
+        {
+          "eventId": "next-level-november",
+          "field": "session.sunday.general.end",
+          "observations": [
+            {
+              "sourceId": "next-level-event",
+              "value": "17:00"
+            },
+            {
+              "sourceId": "next-level-tickets",
+              "value": "16:00"
+            }
+          ],
+          "resolution": "unresolved_requires_curator_review"
+        }
+      ],
+      "boundaryChecks": [
+        {
+          "name": "remote model endpoints rejected",
+          "status": "passed"
+        },
+        {
+          "name": "model endpoint credentials and paths rejected",
+          "status": "passed"
+        },
+        {
+          "name": "missing evidence rejected",
+          "status": "passed"
+        },
+        {
+          "name": "missing source lines rejected",
+          "status": "passed"
+        },
+        {
+          "name": "exact source quote accepted",
+          "status": "passed"
+        },
+        {
+          "name": "non-exact quotation discarded with valid line fallback",
+          "status": "passed"
+        },
+        {
+          "name": "quotation and line mismatch rejected",
+          "status": "passed"
+        },
+        {
+          "name": "duplicate source IDs rejected",
+          "status": "passed"
+        },
+        {
+          "name": "unknown model fields rejected",
+          "status": "passed"
+        },
+        {
+          "name": "non-JSON model boundaries rejected",
+          "status": "passed"
+        }
+      ],
+      "conflictChecks": [
+        {
+          "eventId": "next-level-november",
+          "field": "session.sunday.general.end",
+          "values": [
+            "17:00",
+            "16:00"
+          ],
+          "status": "passed"
+        }
+      ],
+      "summary": {
+        "sources": 4,
+        "passed": 0,
+        "failed": 4,
+        "sourceConflicts": 3,
+        "lineIdFallbackFacts": 0
+      },
+      "limitations": [
+        "This is one local run on short selected organizer excerpts, not a representative accuracy benchmark.",
+        "Schema and exact evidence checks do not prove factual interpretation or completeness; curator review is required.",
+        "The public receipt retains normalized proposed facts and validated line IDs; private source excerpts are not redistributed.",
+        "Conflicting sources remain unresolved. No live monitoring, cancellation guarantee or consumer demand was tested."
+      ]
+    },
+    {
+      "pipelineVersion": "3",
+      "model": "qwen3.5:4b-q4_K_M",
+      "runAt": "2026-10-13T02:49:39.910Z",
+      "ollamaVersion": "0.35.0",
+      "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "sizeBytes": 3324173934,
+      "modifiedAt": "2026-10-09T16:17:04.2171258-07:00",
+      "localEndpoint": "http://127.0.0.1:11434",
+      "settings": {
+        "think": false,
+        "temperature": 0,
+        "seed": 24,
+        "schemaConstrained": true
+      },
+      "license": {
+        "name": "Apache-2.0",
+        "modelCard": "https://huggingface.co/Qwen/Qwen3.5-4B",
+        "checkedAt": "2026-10-13"
+      },
+      "elapsedMs": 49398,
+      "cases": [
+        {
+          "id": "front-row-event",
+          "eventId": "front-row-october",
+          "url": "https://frontrowcardshow.com/collections/las-vegas",
+          "status": "failed",
+          "extractionStatus": "rejected",
+          "reviewStatus": "unreviewed",
+          "elapsedMs": 27436,
+          "model": "qwen3.5:4b-q4_K_M",
+          "modelTiming": {
+            "totalDurationNs": 27420145900,
+            "evalCount": 1131
+          },
+          "inputTextSha256": "053f65a42598ab50d4131edeb9de7225848e2918d564afc6a4c6b3d46b0ac1f6",
+          "sourceLineCount": 11,
+          "fieldChecks": [
+            {
+              "name": "accepted proposal available",
+              "status": "failed"
+            }
+          ],
+          "errors": [
+            "sessions: date and weekday disagree",
+            "sessions: date and weekday disagree",
+            "sessions: date and weekday disagree",
+            "sessions: date and weekday disagree",
+            "sessions: date and weekday disagree"
+          ],
+          "evidenceChecks": [
+            {
+              "path": "eventName",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L1"
+              ]
+            },
+            {
+              "path": "venue",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L2"
+              ]
+            },
+            {
+              "path": "address",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L3"
+              ]
+            },
+            {
+              "path": "childInclusiveCutoff",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L11"
+              ]
+            },
+            {
+              "path": "sessions[0]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L4",
+                "L5"
+              ]
+            },
+            {
+              "path": "sessions[1]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L4",
+                "L5"
+              ]
+            },
+            {
+              "path": "sessions[2]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L6"
+              ]
+            },
+            {
+              "path": "sessions[3]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L7",
+                "L8"
+              ]
+            },
+            {
+              "path": "sessions[4]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L7",
+                "L8"
+              ]
+            },
+            {
+              "path": "admission[0]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L9"
+              ]
+            },
+            {
+              "path": "admission[1]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L9"
+              ]
+            },
+            {
+              "path": "admission[2]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L10"
+              ]
+            },
+            {
+              "path": "admission[3]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L10"
+              ]
+            },
+            {
+              "path": "admission[4]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L10"
+              ]
+            },
+            {
+              "path": "admission[5]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L10"
+              ]
+            }
+          ],
+          "acceptedProposal": null
+        },
+        {
+          "id": "front-row-tickets",
+          "eventId": "front-row-october",
+          "url": "https://events.leapevents.com/event/front-row-card-show-las-vegas-2026-october-24-25",
+          "status": "failed",
+          "extractionStatus": "evidence_validated_needs_review",
+          "reviewStatus": "unreviewed",
+          "elapsedMs": 8671,
+          "model": "qwen3.5:4b-q4_K_M",
+          "modelTiming": {
+            "totalDurationNs": 8667822400,
+            "evalCount": 353
+          },
+          "inputTextSha256": "bf8282cff961da9b7e55b703e23e63ee46e664389b42018836f6a35b0e79bf0c",
+          "sourceLineCount": 12,
+          "fieldChecks": [
+            {
+              "name": "venue",
+              "status": "passed"
+            },
+            {
+              "name": "childInclusiveCutoff",
+              "status": "passed"
+            },
+            {
+              "name": "required session 1: saturday/general",
+              "status": "passed"
+            },
+            {
+              "name": "required session 2: sunday/general",
+              "status": "failed"
+            },
+            {
+              "name": "required session 3: saturday/trade",
+              "status": "failed"
+            },
+            {
+              "name": "required ticket 1: general/single_day/undefined",
+              "status": "failed"
+            },
+            {
+              "name": "required ticket 2: vip/single_day/undefined",
+              "status": "failed"
+            },
+            {
+              "name": "required ticket 3: vip/weekend/undefined",
+              "status": "failed"
+            }
+          ],
+          "errors": [],
+          "evidenceChecks": [
+            {
+              "path": "eventName",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L1"
+              ]
+            },
+            {
+              "path": "venue",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L2"
+              ]
+            },
+            {
+              "path": "address",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L3"
+              ]
+            },
+            {
+              "path": "childInclusiveCutoff",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L9"
+              ]
+            },
+            {
+              "path": "sessions[0]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L5"
+              ]
+            },
+            {
+              "path": "admission[0]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L10"
+              ]
+            }
+          ],
+          "acceptedProposal": {
+            "eventName": {
+              "value": "Front Row Card Show Las Vegas 2026 October 24-25",
+              "evidence": {
+                "lineIds": [
+                  "L1"
+                ],
+                "method": "exact_quote"
+              }
+            },
+            "venue": {
+              "value": "RIO HOTEL & CASINO",
+              "evidence": {
+                "lineIds": [
+                  "L2"
+                ],
+                "method": "exact_quote"
+              }
+            },
+            "address": {
+              "value": "3700 W. Flamingo Road, Las Vegas, NV 89103",
+              "evidence": {
+                "lineIds": [
+                  "L3"
+                ],
+                "method": "exact_quote"
+              }
+            },
+            "sessions": [
+              {
+                "date": "2026-10-24",
+                "day": "saturday",
+                "kind": "general",
+                "start": "11:00",
+                "end": "17:00",
+                "evidence": {
+                  "lineIds": [
+                    "L5"
+                  ],
+                  "method": "exact_quote"
+                }
+              }
+            ],
+            "admission": [
+              {
+                "kind": "general",
+                "scope": "single_day",
+                "purchase": "door",
+                "adultFeeCents": 1079,
+                "serviceFeeCents": 79,
+                "evidence": {
+                  "lineIds": [
+                    "L10"
+                  ],
+                  "method": "exact_quote"
+                }
+              }
+            ],
+            "childInclusiveCutoff": {
+              "value": 10,
+              "evidence": {
+                "lineIds": [
+                  "L9"
+                ],
+                "method": "exact_quote"
+              }
+            }
+          }
+        },
+        {
+          "id": "next-level-event",
+          "eventId": "next-level-november",
+          "url": "https://nextlevelcardshows.com/card-shows/santa-fe-station-november-2026/",
+          "status": "failed",
+          "extractionStatus": "evidence_validated_needs_review",
+          "reviewStatus": "unreviewed",
+          "elapsedMs": 7196,
+          "model": "qwen3.5:4b-q4_K_M",
+          "modelTiming": {
+            "totalDurationNs": 7191716100,
+            "evalCount": 296
+          },
+          "inputTextSha256": "f6d6434633b1215ccab4f3bcb75c810ee8a447e810fbd400c3e4de9db9a6c07c",
+          "sourceLineCount": 8,
+          "fieldChecks": [
+            {
+              "name": "childInclusiveCutoff",
+              "status": "passed"
+            },
+            {
+              "name": "required session 1: saturday/general",
+              "status": "passed"
+            },
+            {
+              "name": "required session 2: sunday/general",
+              "status": "failed"
+            },
+            {
+              "name": "required session 3: saturday/vip",
+              "status": "failed"
+            },
+            {
+              "name": "required session 4: sunday/vip",
+              "status": "failed"
+            },
+            {
+              "name": "required ticket 1: general/weekend/undefined",
+              "status": "failed"
+            },
+            {
+              "name": "required ticket 2: vip/weekend/undefined",
+              "status": "failed"
+            },
+            {
+              "name": "session count",
+              "status": "failed"
+            },
+            {
+              "name": "admission count",
+              "status": "failed"
+            }
+          ],
+          "errors": [],
+          "evidenceChecks": [
+            {
+              "path": "eventName",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L1"
+              ]
+            },
+            {
+              "path": "venue",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L2"
+              ]
+            },
+            {
+              "path": "address",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L2"
+              ]
+            },
+            {
+              "path": "childInclusiveCutoff",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L7"
+              ]
+            },
+            {
+              "path": "sessions[0]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L4"
+              ]
+            },
+            {
+              "path": "admission[0]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L4"
+              ]
+            }
+          ],
+          "acceptedProposal": {
+            "eventName": {
+              "value": "Card Show at Santa Fe Station",
+              "evidence": {
+                "lineIds": [
+                  "L1"
+                ],
+                "method": "exact_quote"
+              }
+            },
+            "venue": {
+              "value": "Santa Fe Station",
+              "evidence": {
+                "lineIds": [
+                  "L2"
+                ],
+                "method": "exact_quote"
+              }
+            },
+            "address": {
+              "value": "4949 N Rancho Dr, Las Vegas, NV 89130",
+              "evidence": {
+                "lineIds": [
+                  "L2"
+                ],
+                "method": "exact_quote"
+              }
+            },
+            "sessions": [
+              {
+                "date": "2026-11-21",
+                "day": "saturday",
+                "kind": "general",
+                "start": "10:00",
+                "end": "17:00",
+                "evidence": {
+                  "lineIds": [
+                    "L4"
+                  ],
+                  "method": "exact_quote"
+                }
+              }
+            ],
+            "admission": [
+              {
+                "kind": "general",
+                "scope": "weekend",
+                "purchase": "unspecified",
+                "adultFeeCents": 100,
+                "serviceFeeCents": null,
+                "evidence": {
+                  "lineIds": [
+                    "L4"
+                  ],
+                  "method": "exact_quote"
+                }
+              }
+            ],
+            "childInclusiveCutoff": {
+              "value": 10,
+              "evidence": {
+                "lineIds": [
+                  "L7"
+                ],
+                "method": "exact_quote"
+              }
+            }
+          }
+        },
+        {
+          "id": "next-level-tickets",
+          "eventId": "next-level-november",
+          "url": "https://www.strideevents.com/events/next-level-card-show/2026/tickets",
+          "status": "failed",
+          "extractionStatus": "evidence_validated_needs_review",
+          "reviewStatus": "unreviewed",
+          "elapsedMs": 6094,
+          "model": "qwen3.5:4b-q4_K_M",
+          "modelTiming": {
+            "totalDurationNs": 6091340500,
+            "evalCount": 253
+          },
+          "inputTextSha256": "ed644fde0054d109b761c457e0cee61ce9d3252da1867e506c63c650fa86dc58",
+          "sourceLineCount": 7,
+          "fieldChecks": [
+            {
+              "name": "childInclusiveCutoff",
+              "status": "passed"
+            },
+            {
+              "name": "required session 1: saturday/general",
+              "status": "passed"
+            },
+            {
+              "name": "required session 2: sunday/general",
+              "status": "failed"
+            },
+            {
+              "name": "admission count",
+              "status": "failed"
+            }
+          ],
+          "errors": [],
+          "evidenceChecks": [
+            {
+              "path": "eventName",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L1"
+              ]
+            },
+            {
+              "path": "venue",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L2"
+              ]
+            },
+            {
+              "path": "address",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L3"
+              ]
+            },
+            {
+              "path": "sessions[0]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L5"
+              ]
+            },
+            {
+              "path": "admission[0]",
+              "ok": true,
+              "method": "exact_quote",
+              "lineIds": [
+                "L7"
+              ]
+            }
+          ],
+          "acceptedProposal": {
+            "eventName": {
+              "value": "Next Level Card Show - 2026 Tickets",
+              "evidence": {
+                "lineIds": [
+                  "L1"
+                ],
+                "method": "exact_quote"
+              }
+            },
+            "venue": {
+              "value": "Santa Fe Station Hotel & Casino",
+              "evidence": {
+                "lineIds": [
+                  "L2"
+                ],
+                "method": "exact_quote"
+              }
+            },
+            "address": {
+              "value": "4949 N. Rancho Drive, Las Vegas",
+              "evidence": {
+                "lineIds": [
+                  "L3"
+                ],
+                "method": "exact_quote"
+              }
+            },
+            "sessions": [
+              {
+                "date": "2026-11-21",
+                "day": "saturday",
+                "kind": "general",
+                "start": "10:00",
+                "end": "17:00",
+                "evidence": {
+                  "lineIds": [
+                    "L5"
+                  ],
+                  "method": "exact_quote"
+                }
+              }
+            ],
+            "admission": [
+              {
+                "kind": "general",
+                "scope": "weekend",
+                "purchase": "unspecified",
+                "adultFeeCents": 0,
+                "serviceFeeCents": null,
+                "evidence": {
+                  "lineIds": [
+                    "L7"
+                  ],
+                  "method": "exact_quote"
+                }
+              }
+            ],
+            "childInclusiveCutoff": null
+          }
+        }
+      ],
+      "conflicts": [
+        {
+          "eventId": "next-level-november",
+          "field": "venue",
+          "observations": [
+            {
+              "sourceId": "next-level-event",
+              "value": "Santa Fe Station"
+            },
+            {
+              "sourceId": "next-level-tickets",
+              "value": "Santa Fe Station Hotel & Casino"
+            }
+          ],
+          "resolution": "unresolved_requires_curator_review"
+        },
+        {
+          "eventId": "next-level-november",
+          "field": "address",
+          "observations": [
+            {
+              "sourceId": "next-level-event",
+              "value": "4949 N Rancho Dr, Las Vegas, NV 89130"
+            },
+            {
+              "sourceId": "next-level-tickets",
+              "value": "4949 N. Rancho Drive, Las Vegas"
+            }
+          ],
+          "resolution": "unresolved_requires_curator_review"
+        },
+        {
+          "eventId": "next-level-november",
+          "field": "admission.general.weekend.unspecified.adultFeeCents",
+          "observations": [
+            {
+              "sourceId": "next-level-event",
+              "value": 100
+            },
+            {
+              "sourceId": "next-level-tickets",
+              "value": 0
+            }
+          ],
+          "resolution": "unresolved_requires_curator_review"
+        }
+      ],
+      "boundaryChecks": [
+        {
+          "name": "remote model endpoints rejected",
+          "status": "passed"
+        },
+        {
+          "name": "model endpoint credentials and paths rejected",
+          "status": "passed"
+        },
+        {
+          "name": "missing evidence rejected",
+          "status": "passed"
+        },
+        {
+          "name": "missing source lines rejected",
+          "status": "passed"
+        },
+        {
+          "name": "exact source quote accepted",
+          "status": "passed"
+        },
+        {
+          "name": "repeated exact quotation matched to its later source line",
+          "status": "passed"
+        },
+        {
+          "name": "non-exact quotation discarded with valid line fallback",
+          "status": "passed"
+        },
+        {
+          "name": "quotation and line mismatch rejected",
+          "status": "passed"
+        },
+        {
+          "name": "duplicate source IDs rejected",
+          "status": "passed"
+        },
+        {
+          "name": "unknown model fields rejected",
+          "status": "passed"
+        },
+        {
+          "name": "non-JSON model boundaries rejected",
+          "status": "passed"
+        }
+      ],
+      "conflictChecks": [
+        {
+          "eventId": "next-level-november",
+          "field": "session.sunday.general.end",
+          "values": [
+            "17:00",
+            "16:00"
+          ],
+          "status": "failed"
+        }
+      ],
+      "summary": {
+        "sources": 4,
+        "passed": 0,
+        "failed": 4,
+        "sourceConflicts": 3,
+        "lineIdFallbackFacts": 0
+      },
+      "limitations": [
+        "This is one local run on short selected organizer excerpts, not a representative accuracy benchmark.",
+        "Schema and exact evidence checks do not prove factual interpretation or completeness; curator review is required.",
+        "The public receipt retains normalized proposed facts and validated line IDs; private source excerpts are not redistributed.",
+        "Conflicting sources remain unresolved. No live monitoring, cancellation guarantee or consumer demand was tested."
+      ]
+    }
+  ],
+  "previousCheckRevisions": [
+    {
+      "checkedAt": "2026-10-13T02:53:04.483Z",
+      "summary": {
+        "sources": 4,
+        "passed": 1,
+        "failed": 3,
+        "sourceConflicts": 3,
+        "lineIdFallbackFacts": 0,
+        "evidenceValidated": 3,
+        "recheckInvokedModel": false
+      },
+      "cases": [
+        {
+          "id": "front-row-event",
+          "status": "failed",
+          "fieldChecks": [
+            {
+              "name": "accepted proposal available",
+              "status": "failed"
+            }
+          ]
+        },
+        {
+          "id": "front-row-tickets",
+          "status": "passed",
+          "fieldChecks": [
+            {
+              "name": "venue",
+              "status": "passed"
+            },
+            {
+              "name": "childInclusiveCutoff",
+              "status": "passed"
+            },
+            {
+              "name": "required session 1: saturday/general",
+              "status": "passed"
+            },
+            {
+              "name": "required session 2: sunday/general",
+              "status": "passed"
+            },
+            {
+              "name": "required session 3: saturday/trade",
+              "status": "passed"
+            },
+            {
+              "name": "required ticket 1: general/single_day/undefined",
+              "status": "passed"
+            },
+            {
+              "name": "required ticket 2: vip/single_day/undefined",
+              "status": "passed"
+            },
+            {
+              "name": "required ticket 3: vip/weekend/undefined",
+              "status": "passed"
+            }
+          ]
+        },
+        {
+          "id": "next-level-event",
+          "status": "failed",
+          "fieldChecks": [
+            {
+              "name": "childInclusiveCutoff",
+              "status": "passed"
+            },
+            {
+              "name": "required session 1: saturday/general",
+              "status": "passed"
+            },
+            {
+              "name": "required session 2: sunday/general",
+              "status": "passed"
+            },
+            {
+              "name": "required session 3: saturday/vip",
+              "status": "passed"
+            },
+            {
+              "name": "required session 4: sunday/vip",
+              "status": "passed"
+            },
+            {
+              "name": "required ticket 1: general/weekend/undefined",
+              "status": "passed"
+            },
+            {
+              "name": "required ticket 2: vip/weekend/undefined",
+              "status": "passed"
+            },
+            {
+              "name": "session count",
+              "status": "passed"
+            },
+            {
+              "name": "admission count",
+              "status": "failed"
+            }
+          ]
+        },
+        {
+          "id": "next-level-tickets",
+          "status": "passed",
+          "fieldChecks": [
+            {
+              "name": "childInclusiveCutoff",
+              "status": "passed"
+            },
+            {
+              "name": "required session 1: saturday/general",
+              "status": "passed"
+            },
+            {
+              "name": "required session 2: sunday/general",
+              "status": "passed"
+            },
+            {
+              "name": "admission count",
+              "status": "passed"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "fieldChecksUpdatedAt": "2026-10-13T02:57:47.212Z"
+}

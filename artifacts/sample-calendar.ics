@@ -1,0 +1,52 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ShowWindow//Las Vegas Visit Planner//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+X-LIC-LOCATION:America/Los_Angeles
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:20070311T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:20071104T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:d3170c75@showwindow.local
+DTSTAMP:20261013T024748Z
+DTSTART;TZID=America/Los_Angeles:20261024T110000
+DTEND;TZID=America/Los_Angeles:20261024T120000
+SUMMARY:Front Row Card Show — Las Vegas · General admission
+LOCATION:Rio Hotel & Casino — Convention Center\, 3700 W Flamingo Road\, 
+ Las Vegas\, NV 89103
+DESCRIPTION:1 adult\; child ages 10. Admission: $10.79 (General admission 
+ — advance\, one day).\n1h overlaps the published general admission sessi
+ on.\nA published category matches your interest\; specific inventory is no
+ t guaranteed.\n$10.79 admission for your party under General admission —
+  advance\, one day.\nAdmission only\; parking\, travel and purchases are e
+ xcluded.\n1 child is free under the published age rule\, with an adult.\nO
+ ne-day online ticket: $10 plus $0.79 service fee. Advance sales end at mid
+ night Friday\, October 23. Trade-night access is for show attendees.\nPark
+ ing: The organizer publishes free parking at the Rio Convention Center.\nF
+ ront Row official Las Vegas event\; checked 2026-10-12: https://frontrowca
+ rdshow.com/collections/las-vegas\nFront Row official Leap tickets\; checke
+ d 2026-10-12: https://events.leapevents.com/event/front-row-card-show-las-
+ vegas-2026-october-24-25\nFront Row official parking information\; checked
+  2026-10-12: https://frontrowcardshow.com/pages/parking-and-transportation
+ -information\nSaved source snapshot. Confirm the organizer before leaving.
+  This is not a ticket or an inventory guarantee.
+URL:https://frontrowcardshow.com/collections/las-vegas
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
