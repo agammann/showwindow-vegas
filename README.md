@@ -4,6 +4,8 @@ A Las Vegas card-show visit planner by [agammann](https://github.com/agammann). 
 
 [Source repository](https://github.com/agammann/showwindow-vegas) · [Live demo](https://agammann.github.io/showwindow-vegas/)
 
+[DEV Week 2 submission](https://dev.to/agammann/showwindow-a-card-show-visit-that-fits-your-actual-afternoon-49i7)
+
 ## What it does
 
 - Separates general admission, early-entry tickets and evening trade sessions.

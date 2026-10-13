@@ -1,6 +1,6 @@
 ---
 title: "ShowWindow: a card-show visit that fits your actual afternoon"
-published: false
+published: true
 tags: devchallenge, hf26challenge
 ---
 

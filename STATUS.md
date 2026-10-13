@@ -25,12 +25,12 @@ The final four-source model check passed **1/4 complete configured cases**; **3/
 - Public source: [agammann/showwindow-vegas](https://github.com/agammann/showwindow-vegas).
 - Public demo: [ShowWindow](https://agammann.github.io/showwindow-vegas/). The actual public-site check confirmed the default plan, VIP timing and real HTML/calendar downloads without console errors.
 - Owner-private preview: [ShowWindow on Sites](https://showwindow-vegas.alx21.chatgpt.site), published successfully as a separate private preview.
-- DEV submission: reviewed draft at [docs/challenge-entry.md](docs/challenge-entry.md); publication awaits action-time confirmation of eligibility and the contest rules. It has not been submitted.
+- DEV submission: [published Week 2 entry](https://dev.to/agammann/showwindow-a-card-show-visit-that-fits-your-actual-afternoon-49i7) at 2026-10-13 03:24:09 UTC (October 12, 8:24pm PDT). DEV displays the Side Hustle submission banner. The public API confirms author agammann, required tags, and an exact normalized body match to the reviewed draft.
 - First collector trial, willingness to pay and revenue: not established.
 
-## Remaining submission step
+## Submission complete
 
-Confirm eligibility and acceptance of the linked contest rules, then publish and verify the rendered DEV entry with the required tags, source link and public demo. The project and demo are already published.
+The user confirmed age/eligibility and acceptance of the contest rules immediately before publication. The entry, source repository and live demo are published and verified. No required delivery work remains. Contest judging and any later source refresh are separate from this completed submission.
 
 ## Limits
 

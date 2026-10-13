@@ -1,7 +1,7 @@
 {
   "project": "ShowWindow",
   "owner": "agammann",
-  "status": "ready_for_dev_submission",
+  "status": "submitted",
   "clientDate": "2026-10-12",
   "repository": {
     "url": "https://github.com/agammann/showwindow-vegas",
@@ -69,12 +69,16 @@
   "draft": {
     "path": "docs/challenge-entry.md",
     "challengeUrl": "https://dev.to/challenges/hacktoberfest-week2-2026-10-12",
-    "published": false,
-    "submitted": false,
+    "published": true,
+    "submitted": true,
     "tags": [
       "devchallenge",
       "hf26challenge"
-    ]
+    ],
+    "url": "https://dev.to/agammann/showwindow-a-card-show-visit-that-fits-your-actual-afternoon-49i7",
+    "articleId": 4841197,
+    "publishedAt": "2026-10-13T03:24:09Z",
+    "verification": "public_author_tags_body_and_links_match; challenge_submission_banner_visible"
   },
   "businessValidation": {
     "collectorTrial": "not_established",
@@ -82,10 +86,7 @@
     "revenue": "not_established",
     "pricingHypothesis": "A possible $5 weekend research pack; untested. Current app is free and has no checkout."
   },
-  "remaining": [
-    "Confirm eligibility and action-time acceptance of contest rules",
-    "Publish and verify the DEV submission"
-  ],
+  "remaining": [],
   "screenshots": [
     "docs/images/desktop.jpg",
     "docs/images/mobile.jpg"
