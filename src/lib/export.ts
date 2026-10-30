@@ -97,7 +97,7 @@ export function buildIcs(candidate: VisitCandidate, request: VisitRequest): stri
     `LOCATION:${escapeIcs(`${candidate.show.venue.name}, ${candidate.show.venue.address}`)}`,
     `DESCRIPTION:${escapeIcs(description)}`,
     ...(source ? [`URL:${safeUrl(source.url)}`] : []),
-    'STATUS:CONFIRMED', 'TRANSP:OPAQUE', 'END:VEVENT', 'END:VCALENDAR',
+    'STATUS:TENTATIVE', 'TRANSP:OPAQUE', 'END:VEVENT', 'END:VCALENDAR',
   ];
   return `${lines.map(foldLine).join('\r\n')}\r\n`;
 }

@@ -7,7 +7,7 @@ Updated for the project’s client date: **2026-10-12**.
 - React/TypeScript collector planner with visit hours, party ages, interest filters, collecting goal and admission budget.
 - Deterministic session overlap and published group admission calculations.
 - Source-linked conflicts and unknown terms, with saved-plan blocking for unresolved details.
-- HTML pocket-plan and local-time calendar exports for confirmed visits.
+- HTML pocket-plan and tentative local-time calendar exports for visits with established source facts.
 - Reviewed event snapshot: 11 listings, 33 supported sessions, ten shows with physical destinations across six distinct venues, and one TBA location.
 - Local Qwen3.5-4B source compiler, evidence validation and actual execution receipts. Individually reviewed Front Row and Next Level fields are incorporated and listed in the event-source receipt.
 - CI and GitHub Pages workflow definitions.

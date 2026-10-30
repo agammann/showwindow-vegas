@@ -11,7 +11,7 @@ A Las Vegas card-show visit planner by [agammann](https://github.com/agammann). 
 - Separates general admission, early-entry tickets and evening trade sessions.
 - Calculates usable visit time and group admission, including verified child cutoffs and ticket service fees.
 - Shows source conflicts, unpublished admission terms and unannounced venues. Those uncertainties block a confirmed saved plan.
-- Downloads a self-contained HTML pocket plan and an `.ics` calendar event for a confirmed visit.
+- Downloads a self-contained HTML pocket plan and a tentative `.ics` calendar event when the session, venue and admission facts are established.
 - Links every modeled event to organizer, official ticketing or venue sources.
 
 The snapshot was reviewed **October 12, 2026**. It contains **11 listings and 33 supported sessions** for October 13–December 31: ten shows with published physical destinations across six distinct venues, plus one announced show with a venue TBA. It is curated regional research, not a complete or live calendar. The [source notes](docs/event-sources.md) describe the omissions and conflicts.

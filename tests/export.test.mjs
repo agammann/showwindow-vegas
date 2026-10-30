@@ -73,6 +73,8 @@ test('calendar uses the actual chosen visit window with the Las Vegas timezone a
   assert.ok(first.includes('DTSTART;TZID=America/Los_Angeles:20261024T120000\r\n'));
   assert.ok(first.includes('DTEND;TZID=America/Los_Angeles:20261024T140000\r\n'));
   assert.ok(first.includes('BEGIN:VTIMEZONE'));
+  assert.ok(first.includes('STATUS:TENTATIVE\r\n'));
+  assert.ok(!first.includes('STATUS:CONFIRMED\r\n'));
   assert.equal(first.match(/^UID:(.+)$/m)[1], second.match(/^UID:(.+)$/m)[1]);
   assert.equal(first.match(/BEGIN:VEVENT/g).length, 1);
   assert.ok(first.endsWith('END:VCALENDAR\r\n'));
