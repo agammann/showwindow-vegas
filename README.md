@@ -14,11 +14,11 @@ A Las Vegas card-show visit planner by [agammann](https://github.com/agammann). 
 - Downloads a self-contained HTML pocket plan and a tentative `.ics` calendar event when the session, venue and admission facts are established.
 - Links every modeled event to organizer, official ticketing or venue sources.
 
-The snapshot was reviewed **October 12, 2026**. It contains **11 listings and 33 supported sessions** for October 13–December 31: ten shows with published physical destinations across six distinct venues, plus one announced show with a venue TBA. It is curated regional research, not a complete or live calendar. The [source notes](docs/event-sources.md) describe the omissions and conflicts.
+This is a dated demonstration snapshot, reviewed **October 12, 2026**, rather than a current event calendar. The planner starts with the historical **October 24, 2026** visit inputs. Its purchase date still follows today in Las Vegas, so expired advance-sale windows now produce unknown admission costs and can prevent saving a plan. The reference examples below assume an October 12, 2026 purchase date; they are not promises about results from today's interface. Select a different supported visit date to explore the snapshot, and verify current organizer information before planning a real visit. It contains **11 listings and 33 supported sessions** for October 13–December 31: ten shows with published physical destinations across six distinct venues, plus one announced show with a venue TBA. It is curated regional research, not a complete or live calendar. The [source notes](docs/event-sources.md) describe the omissions and conflicts.
 
-## Try these visits
+## Reference examples with an October 12, 2026 purchase date
 
-| Inputs | Expected behavior |
+| Inputs | Result under the snapshot purchase-date assumption |
 |---|---|
 | October 24, 10:30–12:00; two adults and a 10-year-old; Pokémon; browse; advance admission; $21.58 | Front Row GA starts at 11:00, leaving one usable hour. Two $10 tickets with $0.79 fees total $21.58; the child enters free with an adult. Changing the child to 11 makes the published GA total $32.37. |
 | November 22, 16:15–16:45; Pokémon; browse | Next Level’s ticket page closes Sunday at 16:00; its organizer page says 17:00. No confirmed time remains in that window, although 30 minutes may be possible under the later claim. Saving is blocked. |
