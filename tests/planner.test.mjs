@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { validateRequest, planVisit, formatMoney, formatTime, formatDuration } from '../src/lib/planner.ts';
+import { validateRequest, planVisit, selectVisitCandidate, formatMoney, formatTime, formatDuration } from '../src/lib/planner.ts';
 
 const request = changes => ({ date: '2026-10-24', from: '10:00', until: '12:00', adults: 2, childAges: [10], budgetCents: 5000, goal: 'browse', categories: ['pokemon'], purchaseMode: 'advance', ...changes });
 const show = changes => ({
@@ -229,6 +229,44 @@ test('planner does not mutate inputs, and known-fit options sort ahead of uncert
   assert.equal(result.candidates[0].session.kind, 'general');
   assert.deepEqual(fixture, original);
   assert.deepEqual(input, originalRequest);
+});
+
+test('trade defaults to the ranked free session while an explicit blocked show remains selectable', () => {
+  const free = show({
+    id: 'free-trade', dateStart: '2026-12-05', dateEnd: '2026-12-05', categories: ['general'],
+    sessions: [{ ...show().sessions[2], date: '2026-12-05', start: '18:00', end: '22:00', access: 'public-free' }],
+  });
+  const tba = show({
+    id: 'tba-general', dateStart: '2026-12-05', dateEnd: '2026-12-05', categories: ['general'],
+    venue: { ...show().venue, status: 'tba', address: '' },
+    sessions: [{ ...show().sessions[0], date: '2026-12-05', start: '18:00', end: '20:00' }],
+  });
+  const { candidates } = planVisit([tba, free], request({ date: '2026-12-05', from: '18:00', until: '20:00', adults: 1, childAges: [], budgetCents: 0, goal: 'trade', categories: ['general'] }));
+  const rankedIds = candidates.map(candidate => candidate.id);
+  const blocked = candidates.find(candidate => candidate.show.id === tba.id);
+  assert.equal(candidates[0].show.id, free.id);
+  assert.equal(candidates[0].canSave, true);
+  assert.equal(blocked.status, 'over-budget');
+  assert.equal(blocked.canSave, false);
+  assert.equal(selectVisitCandidate(candidates, null, 'trade'), candidates[0]);
+  assert.equal(selectVisitCandidate(candidates, 'missing', 'trade'), candidates[0]);
+  assert.equal(selectVisitCandidate(candidates, blocked.id, 'trade'), blocked);
+  assert.deepEqual(candidates.map(candidate => candidate.id), rankedIds);
+  assert.equal(selectVisitCandidate([], null, 'trade'), undefined);
+});
+
+test('only browsing prefers general admission within the first ranked show and status', () => {
+  const { candidates } = planVisit([show()], request());
+  const first = candidates[0];
+  const general = ga({ candidates });
+  assert.equal(first.session.kind, 'vip');
+  assert.equal(selectVisitCandidate(candidates, null, 'browse'), general);
+  assert.equal(selectVisitCandidate(candidates, first.id, 'browse'), first);
+  assert.equal(selectVisitCandidate(candidates, null, 'grading'), first);
+  const otherShow = { ...general, id: 'other:ga', show: { ...general.show, id: 'other' } };
+  const uncertain = { ...general, status: 'needs-confirmation', canSave: false };
+  assert.equal(selectVisitCandidate([first, otherShow], null, 'browse'), first);
+  assert.equal(selectVisitCandidate([first, uncertain], null, 'browse'), first);
 });
 
 test('formatters handle money, wall time and duration without inventing missing values', () => {

@@ -2,7 +2,7 @@
 
 A Las Vegas card-show visit planner by [agammann](https://github.com/agammann). Enter the hours you have, the people coming with you, your collecting interests and an admission budget. ShowWindow compares the published visitor sessions and produces a pocket plan when the destination, hours and party admission can be established.
 
-[Source repository](https://github.com/agammann/showwindow-vegas) · [Live demo](https://agammann.github.io/showwindow-vegas/)
+[Source repository](https://github.com/agammann/showwindow-vegas) · [Open ShowWindow](https://agammann.github.io/showwindow-vegas/)
 
 [DEV Week 2 submission](https://dev.to/agammann/showwindow-a-card-show-visit-that-fits-your-actual-afternoon-49i7)
 
@@ -14,7 +14,11 @@ A Las Vegas card-show visit planner by [agammann](https://github.com/agammann). 
 - Downloads a self-contained HTML pocket plan and a tentative `.ics` calendar event when the session, venue and admission facts are established.
 - Links every modeled event to organizer, official ticketing or venue sources.
 
-This is a dated demonstration snapshot, reviewed **October 12, 2026**, rather than a current event calendar. The planner starts with the historical **October 24, 2026** visit inputs. Its purchase date still follows today in Las Vegas, so expired advance-sale windows now produce unknown admission costs and can prevent saving a plan. The reference examples below assume an October 12, 2026 purchase date; they are not promises about results from today's interface. Select a different supported visit date to explore the snapshot, and verify current organizer information before planning a real visit. It contains **11 listings and 33 supported sessions** for October 13–December 31: ten shows with published physical destinations across six distinct venues, plus one announced show with a venue TBA. It is curated regional research, not a complete or live calendar. The [source notes](docs/event-sources.md) describe the omissions and conflicts.
+The planner uses a fixed regional snapshot reviewed **October 12, 2026**. It contains **11 listings and 33 sessions** for October 13 through December 31, 2026. Ten shows have published destinations across six venues. One location is still TBA in the snapshot. Check the organizer before making a trip. The [source notes](docs/event-sources.md) describe the coverage, omissions and conflicts.
+
+The starting example uses the December 5 public-free trade session. Edit the date, hours, party, interests and budget, then select **Find my window** to apply them. The planner prioritizes a result that fits and keeps incomplete alternatives visible. Downloads use the applied visit details, so editing the form pauses saving until you submit valid details again. A past visit is labeled as historical.
+
+Advance admission uses today's purchase date in Las Vegas. Expired advance terms leave the admission total unknown and may block saving. The historical price examples below use the October 12, 2026 purchase date for comparison.
 
 ## Reference examples with an October 12, 2026 purchase date
 
@@ -50,12 +54,12 @@ pnpm test
 pnpm build
 ```
 
-Local verification passed 50 tests and the production build. Browser checks covered a 1440px desktop and 390px phone layout, real HTML/calendar downloads, VIP timing, the age-10/11 boundary, budget and TBA blocking, input errors, search and selected-show flows, and clearing stale export state. [Desktop](docs/images/desktop.jpg) and [mobile](docs/images/mobile.jpg) screenshots record the rendered app. GitHub Actions and Pages workflows are configured; remote run and public demo verification remain pending. [STATUS.md](STATUS.md) records the delivery state.
+GitHub Actions runs the locked install, tests and production build. The [existing Pages workflow](https://github.com/agammann/showwindow-vegas/actions/workflows/deploy-pages.yml) verifies the archive in pull requests and deploys the build from `main`. [STATUS.md](STATUS.md) and the [verification record](docs/verification.md) document the original submission, browser checks and screenshots.
 
 ## Scope and validation
 
 This build is for collectors choosing a visit in the Las Vegas area. There is no checkout, paid tier, live event monitor, card scanner, inventory matching or vendor booking. Willingness to pay and use by a first collector have not been established. A possible $5 weekend research pack is an untested product hypothesis; the current app is free.
 
-The implementation was started for [HF26 Week 2: Side Hustle](https://dev.to/challenges/hacktoberfest-week2-2026-10-12). The local dataset checks verify fee arithmetic, the inclusive child cutoff, disputed hours, public-free sessions, venue TBA blocking and unknown admission. Local test, build and browser evidence is recorded in the status file; remote delivery remains pending. The source snapshot should be refreshed and reviewed before expanding coverage.
+The implementation was started for [HF26 Week 2: Side Hustle](https://dev.to/challenges/hacktoberfest-week2-2026-10-12). The dataset checks verify fee arithmetic, the inclusive child cutoff, disputed hours, public-free sessions, venue TBA blocking and unknown admission. New coverage requires a fresh review of organizer information.
 
 Application code is MIT licensed. Event facts retain links to their original sources; no organizer flyer artwork is distributed.
