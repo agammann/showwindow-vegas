@@ -1,6 +1,14 @@
 import type { CardShow, PlanResult, ShowSession, TicketRule, VisitCandidate, VisitCost, VisitRequest } from './types.ts';
 
 export const DEFAULT_PURCHASE_DATE = '2026-10-12';
+
+export function selectVisitCandidate(candidates: readonly VisitCandidate[], chosenId: string | null, goal: VisitRequest['goal']): VisitCandidate | undefined {
+  const chosen = candidates.find(candidate => candidate.id === chosenId);
+  if (chosen) return chosen;
+  const first = candidates[0];
+  if (!first || goal !== 'browse') return first;
+  return candidates.find(candidate => candidate.show.id === first.show.id && candidate.status === first.status && candidate.session.kind === 'general') ?? first;
+}
 const categories = new Set(['pokemon', 'sports', 'magic', 'one-piece', 'yugioh', 'lorcana', 'general']);
 const goals = new Set(['browse', 'trade', 'grading']);
 const isCents = (value: unknown): value is number => Number.isSafeInteger(value) && (value as number) >= 0;

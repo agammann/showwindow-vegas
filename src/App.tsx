@@ -1,13 +1,16 @@
 import { useMemo, useState } from 'react';
 import type { FormEvent, ReactNode } from 'react';
 import events from './data/events';
-import { planVisit, formatMoney, formatTime, formatDuration } from './lib/planner';
+import { planVisit, selectVisitCandidate, formatMoney, formatTime, formatDuration } from './lib/planner';
 import { generatePocketHtml, buildIcs } from './lib/export';
 import type { CardShow, Category, VisitCandidate, VisitRequest } from './lib/types';
 
 const labels: Record<Category, string> = { pokemon: 'Pokémon', sports: 'Sports', magic: 'Magic', 'one-piece': 'One Piece', yugioh: 'Yu-Gi-Oh!', lorcana: 'Lorcana', general: 'Other / mixed cards' };
 const allCategories = Object.keys(labels) as Category[];
-const initial: VisitRequest = { date: '2026-10-24', from: '10:00', until: '12:00', adults: 1, childAges: [10], budgetCents: 3000, goal: 'browse', categories: ['pokemon'], purchaseMode: 'advance' };
+const tradeExample: VisitRequest = {
+  date: '2026-12-05', from: '18:00', until: '20:00', adults: 1, childAges: [],
+  budgetCents: 0, goal: 'trade', categories: ['general'], purchaseMode: 'advance',
+};
 const shortDate = (date: string) => new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', timeZone: 'UTC' }).format(new Date(`${date}T12:00:00Z`));
 const longDate = (date: string) => new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${date}T12:00:00Z`));
 const purchaseDate = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Los_Angeles', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
@@ -52,24 +55,34 @@ function TicketDetails({ candidate }: { candidate: VisitCandidate }) {
   </details>;
 }
 
-function VisitResult({ candidate, alternatives, request, choose, openSources }: { candidate: VisitCandidate; alternatives: VisitCandidate[]; request: VisitRequest; choose: (id: string) => void; openSources: () => void }) {
+function VisitResult({ candidate, alternatives, request, draftEdited, choose, openSources }: {
+  candidate: VisitCandidate;
+  alternatives: VisitCandidate[];
+  request: VisitRequest;
+  draftEdited: boolean;
+  choose: (id: string) => void;
+  openSources: () => void;
+}) {
   const [saved, setSaved] = useState(false);
   const { show, session, cost } = candidate;
+  const canSave = candidate.canSave && !draftEdited;
+  const isPast = request.date < purchaseDate;
   const sameShow = alternatives.filter(c => c.show.id === show.id);
   const tradeSession = show.sessions.find(s => s.date === request.date && s.kind === 'trade');
   const party = `${request.adults} ${request.adults === 1 ? 'adult' : 'adults'}${request.childAges.length ? ` + ${request.childAges.length === 1 ? `${[8, 11].includes(request.childAges[0]) ? 'an' : 'a'} ${request.childAges[0]}-year-old` : `children aged ${request.childAges.join(', ')}`}` : ''}`;
   const save = () => { download(generatePocketHtml(candidate, request), `showwindow-${request.date}-${show.id}.html`, 'text/html;charset=utf-8'); setSaved(true); };
   return <article className="visit-result" aria-labelledby="result-title">
     <h2 id="result-title">Your window at {show.organizer === 'Front Row Card Show' ? 'Front Row' : show.organizer}</h2>
-    <p className="result-location">{show.venue.name} · {shortDate(request.date)}</p>
+    <p className="result-location">{show.venue.name} · {longDate(request.date)}{isPast && ' · Past visit date'}</p>
     {sameShow.length > 1 && <div className="session-tabs" role="group" aria-label="Session options">{[...sameShow].sort((a, b) => ['general', 'vip', 'trade'].indexOf(a.session.kind) - ['general', 'vip', 'trade'].indexOf(b.session.kind)).map(c => <button key={c.id} aria-pressed={c.id === candidate.id} onClick={() => choose(c.id)}>{kindLabel(c.session.kind)}</button>)}</div>}
     <div className={`window-panel ${candidate.status !== 'fits' ? 'uncertain' : ''}`}>
       <div className="window-metrics"><div><strong>{durationWords(candidate.usableMinutes)}</strong><span>{candidate.usableMinutes ? `${formatTime(candidate.visitStart)} – ${formatTime(candidate.visitEnd)}` : `Up to ${formatDuration(candidate.possibleMinutes)} may be possible`}</span></div><div className="price"><strong>{cost.totalCents !== null ? formatMoney(cost.totalCents) : cost.minimumCents !== null ? `${formatMoney(cost.minimumCents)}+` : 'Unknown'}</strong><span>{cost.totalCents !== null ? 'Party admission total' : 'Admission needs confirmation'}</span>{cost.rule && <small className="price-rule">{cost.rule.label}</small>}</div></div>
       <Timeline candidate={candidate} request={request} />
       <p className="door-note">{session.kind === 'vip' ? 'VIP doors' : session.kind === 'trade' ? 'Trade session' : 'General doors'} {session.kind === 'trade' ? 'starts' : 'open'} at {formatTime(session.start)}.</p>
-      <div className="result-actions"><div><p className="party-note">{party}{cost.freeChildren ? ` · ${cost.freeChildren === 1 ? 'Child admission free' : `${cost.freeChildren} children free`}` : ''}</p><TicketDetails candidate={candidate} /></div><button className="primary" onClick={save} disabled={!candidate.canSave}>Save arrival plan</button></div>
-      {candidate.status !== 'fits' && <div className="confirmation-note"><strong>{candidate.status === 'over-budget' ? 'Over your admission budget' : 'Confirm before you travel'}</strong><ul>{candidate.issues.map(issue => <li key={issue}>{issue}</li>)}</ul><p>Saving is available when the session, destination and party admission total are confirmed.</p></div>}
-      {saved && candidate.canSave && <div className="saved-message" role="status">Your pocket plan was downloaded. Open the HTML file on your phone or print it. The calendar plan is tentative; check current terms and arrange any required admission before leaving. <button className="text-button" onClick={() => download(buildIcs(candidate, request), `showwindow-${request.date}.ics`, 'text/calendar;charset=utf-8')}>Download tentative calendar plan</button></div>}
+      <div className="result-actions"><div><p className="party-note">{party}{cost.freeChildren ? ` · ${cost.freeChildren === 1 ? 'Child admission free' : `${cost.freeChildren} children free`}` : ''}</p><TicketDetails candidate={candidate} /></div><button className="primary" onClick={save} disabled={!canSave}>{isPast ? 'Save historical plan' : 'Save arrival plan'}</button></div>
+      {draftEdited && <p className="confirmation-note">This result uses your previous visit details. Select Find my window to update it and enable eligible downloads.</p>}
+      {candidate.status !== 'fits' && <div className="confirmation-note"><strong>{candidate.status === 'over-budget' ? 'Over your admission budget' : 'These details need confirmation'}</strong><ul>{candidate.issues.map(issue => <li key={issue}>{issue}</li>)}</ul><p>Saving is available when the session, destination and party admission total are confirmed.</p></div>}
+      {saved && canSave && <div className="saved-message" role="status">Your pocket plan was downloaded. Open the HTML file on your phone or print it. The calendar plan is tentative. {isPast ? 'It records a past visit date.' : 'Check current terms and arrange any required admission before leaving.'} <button className="text-button" onClick={() => download(buildIcs(candidate, request), `showwindow-${request.date}.ics`, 'text/calendar;charset=utf-8')}>Download tentative calendar plan</button></div>}
     </div>
     {sameShow.filter(c => c.id !== candidate.id).map(c => <button className="comparison-row" key={c.id} onClick={() => choose(c.id)}><span><strong>{c.session.kind === 'vip' && c.usableMinutes > candidate.usableMinutes ? `VIP gives you ${formatDuration(c.usableMinutes - candidate.usableMinutes)} more` : `${kindLabel(c.session.kind)} · ${durationWords(c.usableMinutes)}`}</strong><small>{formatTime(c.visitStart)} – {formatTime(c.visitEnd)} · {c.cost.totalCents !== null ? formatMoney(c.cost.totalCents) : 'Total unconfirmed'}</small></span><Icon name="arrow" /></button>)}
     <section className="before-you-go"><h3>Know before you go</h3><div className="logistics"><div><Icon name="pin" /><p><strong>{show.venue.name}</strong><span>{show.venue.address || 'Venue TBA'}</span>{show.venue.indoorDirections && <span>{show.venue.indoorDirections}</span>}{show.venue.status === 'confirmed' && <External href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${show.venue.name} ${show.venue.address}`)}`}>Open directions</External>}</p></div><div><Icon name="car" /><p><strong>{show.parking.status === 'free' ? 'Free parking' : show.parking.status === 'paid' ? 'Paid parking' : 'Parking unconfirmed'}</strong><span>{show.parking.note}</span></p></div><div><Icon name="clock" /><p><strong>{tradeSession ? 'Trade session' : kindLabel(session.kind)}</strong><span>{tradeSession ? `${formatTime(tradeSession.start)} – ${formatTime(tradeSession.end)}` : `${formatTime(session.start)} – ${formatTime(session.end)}`}</span>{tradeSession?.access === 'attendees-only' && <span>For show attendees; confirm access.</span>}</p></div></div>
@@ -79,12 +92,19 @@ function VisitResult({ candidate, alternatives, request, choose, openSources }: 
   </article>;
 }
 
-function VisitForm({ value, submit }: { value: VisitRequest; submit: (request: VisitRequest) => void }) {
+function VisitForm({ value, submit, onEdit }: {
+  value: VisitRequest;
+  submit: (request: VisitRequest) => void;
+  onEdit: () => void;
+}) {
   const [draft, setDraft] = useState(value);
   const [ages, setAges] = useState(value.childAges.join(', '));
   const [budget, setBudget] = useState((value.budgetCents / 100).toString());
   const [errors, setErrors] = useState<string[]>([]);
-  const field = <K extends keyof VisitRequest>(key: K, next: VisitRequest[K]) => setDraft(d => ({ ...d, [key]: next }));
+  const field = <K extends keyof VisitRequest>(key: K, next: VisitRequest[K]) => {
+    setDraft(d => ({ ...d, [key]: next }));
+    onEdit();
+  };
   function onSubmit(e: FormEvent) {
     e.preventDefault();
     const localErrors: string[] = [];
@@ -98,9 +118,9 @@ function VisitForm({ value, submit }: { value: VisitRequest; submit: (request: V
   return <form className="visit-form" onSubmit={onSubmit} noValidate><h2>Your visit</h2>
     <label>Date<input type="date" value={draft.date} onChange={e => field('date', e.target.value)} required /></label>
     <div className="form-pair"><label>From<input type="time" value={draft.from} onChange={e => field('from', e.target.value)} required /></label><label>Until<input type="time" value={draft.until} onChange={e => field('until', e.target.value)} required /></label></div>
-    <div className="form-pair"><label>Adults<input type="number" value={draft.adults} min="1" step="1" onChange={e => field('adults', Number(e.target.value))} required /></label><label>Child ages<input type="text" inputMode="numeric" value={ages} onChange={e => setAges(e.target.value)} placeholder="None" aria-describedby="ages-help" /></label></div>
+    <div className="form-pair"><label>Adults<input type="number" value={draft.adults} min="1" step="1" onChange={e => field('adults', Number(e.target.value))} required /></label><label>Child ages<input type="text" inputMode="numeric" value={ages} onChange={e => { setAges(e.target.value); onEdit(); }} placeholder="None" aria-describedby="ages-help" /></label></div>
     <p className="field-help" id="ages-help">Ages 0–17, separated by commas. Leave empty for adults only.</p>
-    <label>Admission budget<div className="money-input"><span>$</span><input aria-label="Admission budget" type="text" inputMode="decimal" value={budget} onChange={e => setBudget(e.target.value)} required /></div></label>
+    <label>Admission budget<div className="money-input"><span>$</span><input aria-label="Admission budget" type="text" inputMode="decimal" value={budget} onChange={e => { setBudget(e.target.value); onEdit(); }} required /></div></label>
     <label>Goal<select value={draft.goal} onChange={e => field('goal', e.target.value as VisitRequest['goal'])}><option value="browse">Browse</option><option value="trade">Trade</option><option value="grading">Grading submissions</option></select></label>
     <fieldset><legend>What are you most interested in?</legend><div className="interest-options">{(['pokemon', 'sports', 'magic', 'one-piece'] as Category[]).map(category => <button type="button" key={category} aria-pressed={draft.categories.includes(category)} onClick={() => field('categories', draft.categories.includes(category) ? draft.categories.filter(c => c !== category) : [...draft.categories, category])}>{labels[category]}</button>)}</div><details className="more-interests"><summary>More interests</summary><div className="interest-options">{(['yugioh', 'lorcana', 'general'] as Category[]).map(category => <button type="button" key={category} aria-pressed={draft.categories.includes(category)} onClick={() => field('categories', draft.categories.includes(category) ? draft.categories.filter(c => c !== category) : [...draft.categories, category])}>{labels[category]}</button>)}</div></details></fieldset>
     <label className="purchase-label">Ticket purchase<select value={draft.purchaseMode} onChange={e => field('purchaseMode', e.target.value as VisitRequest['purchaseMode'])}><option value="advance">Advance · buying today</option><option value="door">At the door</option></select></label>
@@ -126,17 +146,66 @@ function Sources({ selected, setSelected }: { selected: string; setSelected: (id
 
 export default function App() {
   const [page, setPage] = useState<'plan' | 'shows' | 'sources'>('plan');
-  const [request, setRequest] = useState(initial);
+  const [request, setRequest] = useState(tradeExample);
   const [formKey, setFormKey] = useState(0);
+  const [draftEdited, setDraftEdited] = useState(false);
   const [chosenId, setChosenId] = useState<string | null>(null);
   const [sourceShow, setSourceShow] = useState('all');
   const result = useMemo(() => planVisit(events, request, purchaseDate), [request]);
-  const candidate = result.candidates.find(c => c.id === chosenId) ?? result.candidates.find(c => c.session.kind === 'general') ?? result.candidates[0];
-  const go = (next: typeof page) => { setPage(next); window.scrollTo({ top: 0 }); };
-  const submit = (next: VisitRequest) => { setRequest(next); setChosenId(null); };
-  const selectShow = (show: CardShow) => { const session = show.sessions.find(s => s.kind === 'general') ?? show.sessions[0]; const next = { ...initial, date: session?.date ?? show.dateStart, from: session?.start ?? '10:00', until: session?.end ?? '18:00', childAges: [], categories: allCategories, goal: session?.kind === 'trade' ? 'trade' as const : 'browse' as const }; setRequest(next); setChosenId(session ? `${show.id}:${session.id}` : null); setFormKey(k => k + 1); go('plan'); };
+  const candidate = selectVisitCandidate(result.candidates, chosenId, request.goal);
+  const go = (next: typeof page) => {
+    setPage(next);
+    if (next !== 'plan') setDraftEdited(false);
+    window.scrollTo({ top: 0 });
+  };
+  const submit = (next: VisitRequest) => {
+    setRequest(next);
+    setChosenId(null);
+    setDraftEdited(false);
+  };
+  const selectShow = (show: CardShow) => {
+    const session = show.sessions.find(s => s.kind === 'general') ?? show.sessions[0];
+    const next: VisitRequest = {
+      ...tradeExample,
+      date: session?.date ?? show.dateStart,
+      from: session?.start ?? '10:00',
+      until: session?.end ?? '18:00',
+      budgetCents: 3000,
+      categories: allCategories,
+      goal: session?.kind === 'trade' ? 'trade' : 'browse',
+    };
+    setRequest(next);
+    setChosenId(session ? `${show.id}:${session.id}` : null);
+    setDraftEdited(false);
+    setFormKey(k => k + 1);
+    go('plan');
+  };
   return <><a className="skip-link" href="#main">Skip to planner</a><header className="site-header"><button className="wordmark" onClick={() => go('plan')}>ShowWindow</button><nav aria-label="Main navigation"><button aria-current={page === 'plan' ? 'page' : undefined} onClick={() => go('plan')}>Plan a visit</button><button aria-current={page === 'shows' ? 'page' : undefined} onClick={() => go('shows')}>All shows</button><button aria-current={page === 'sources' ? 'page' : undefined} onClick={() => go('sources')}>Sources</button></nav><span className="region"><Icon name="pin" />Las Vegas, NV</span></header>
-    <main id="main">{page === 'plan' ? <><div className="page-intro"><h1>Make time for the right show.</h1><p>A Las Vegas card-show plan that fits your hours, your people, and your budget.</p></div><div className="planner-layout"><VisitForm key={formKey} value={request} submit={submit} /><section className="results" aria-label="Visit results" aria-live="polite">{candidate ? <><VisitResult key={`${candidate.id}:${JSON.stringify(request)}`} candidate={candidate} alternatives={result.candidates} request={request} choose={setChosenId} openSources={() => { setSourceShow(candidate.show.id); go('sources'); }} />{result.candidates.some(c => c.show.id !== candidate.show.id) && <section className="other-shows"><h3>Other shows in your window</h3>{result.candidates.filter((c, index, arr) => c.show.id !== candidate.show.id && arr.findIndex(x => x.show.id === c.show.id) === index).map(c => <button className="comparison-row" key={c.id} onClick={() => setChosenId(c.id)}><span><strong>{c.show.name}</strong><small>{durationWords(c.usableMinutes)} · {c.status === 'fits' ? formatMoney(c.cost.totalCents) : 'Needs confirmation'}</small></span><Icon name="arrow" /></button>)}</section>}</> : <div className="empty-state"><Icon name="clock" /><h2>No published session fits these filters.</h2><p>Try another date, different hours or “Other / mixed cards” under More interests. A missing match does not mean a show has no cards you like; it means the checked sources do not establish that fit.</p><button className="outline" onClick={() => go('shows')}>Browse reviewed shows</button></div>}</section></div></> : page === 'shows' ? <AllShows selectShow={selectShow} /> : <Sources selected={sourceShow} setSelected={setSourceShow} />}</main>
+    <main id="main">
+      {page === 'plan' ? <>
+        <div className="page-intro">
+          <h1>Make time for the right show.</h1>
+          <p>Explore Las Vegas card shows reviewed October 12, 2026. Check current organizer details before making a trip.</p>
+        </div>
+        <div className="planner-layout">
+          <VisitForm key={formKey} value={request} submit={submit} onEdit={() => setDraftEdited(true)} />
+          <section className="results" aria-label="Visit results" aria-live="polite">
+            {candidate ? <>
+              <VisitResult
+                key={`${candidate.id}:${JSON.stringify(request)}:${draftEdited}`}
+                candidate={candidate}
+                alternatives={result.candidates}
+                request={request}
+                draftEdited={draftEdited}
+                choose={setChosenId}
+                openSources={() => { setSourceShow(candidate.show.id); go('sources'); }}
+              />
+              {result.candidates.some(c => c.show.id !== candidate.show.id) && <section className="other-shows"><h3>Other shows in your window</h3>{result.candidates.filter((c, index, arr) => c.show.id !== candidate.show.id && arr.findIndex(x => x.show.id === c.show.id) === index).map(c => <button className="comparison-row" key={c.id} onClick={() => setChosenId(c.id)}><span><strong>{c.show.name}</strong><small>{durationWords(c.usableMinutes)} · {c.status === 'fits' ? formatMoney(c.cost.totalCents) : 'Needs confirmation'}</small></span><Icon name="arrow" /></button>)}</section>}
+            </> : <div className="empty-state"><Icon name="clock" /><h2>No published session fits these filters.</h2><p>Try another date, different hours or “Other / mixed cards” under More interests. A missing match does not mean a show has no cards you like; it means the checked sources do not establish that fit.</p><button className="outline" onClick={() => go('shows')}>Browse reviewed shows</button></div>}
+          </section>
+        </div>
+      </> : page === 'shows' ? <AllShows selectShow={selectShow} /> : <Sources selected={sourceShow} setSelected={setSourceShow} />}
+    </main>
     <footer className="site-footer"><span>ShowWindow · Las Vegas collector visits</span><div><button onClick={() => { setSourceShow('all'); go('sources'); }}>Sources & limitations</button><External href="https://github.com/agammann/showwindow-vegas">Open source</External></div><p>Organizer information reviewed October 12, 2026. Check the latest source before leaving.</p></footer>
   </>;
 }
